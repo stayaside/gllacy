@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<title>Gllacy каталог</title>
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+		<link rel="stylesheet" href="libs/owl-carousel/owl.carousel.min.css">
+		<link rel="stylesheet" href="libs/owl-carousel/owl.theme.default.min.css">
+	</head>
+	<body>
+		<header class="main-header">
+			<div class="container">
+				<div class="logo_navigation">
+					<div class="logo">
+						<img src="img/logo.svg" alt="Gllacy Shop" width="157" height="66">
+					</div>
+					<ul>
+						<li><a href="#">Каталог</a></li>
+						<li><a href="#">Доставка и оплата</a></li>
+						<li><a href="#">О Компании</a></li>
+					</ul>
+				</div>
+				<div class="user-block">
+					<input type="search">
+					<a href="#" class="login">Вход</a>
+					<a href="#" class="cart">Пусто</a>
+				</div>
+				<div class="info">
+					<p>С 10 до 20, ежедневно</p>
+					<p>8 812 450-25-25</p>
+				</div>
+			</div>
+		</header>
+		<main class="container">
+			<div class="breadcrumps">
+				<ul>
+					<li><a href="#">Главная</a></li>
+					<li><a href="#">Каталог</a></li>
+					<li><a href="#">Сливочное</a></li>
+				</ul>
+			</div>
+			<h1>Сливочное мороженое</h1>
+			<div class="sort-form">
+				<form action="#" name="sort-form">
+					<fieldset>
+						<legend>Сортировка</legend>
+						<select name="sort[]">
+							<option value="popular" selected>По популярности</option>
+							<option value="price">По цене</option>
+						</select>
+					</fieldset>
+					<fieldset>
+						<legend>Цена:</legend>
+						<input type="text" id="amount" readonly>
+						<div id="slider-range"></div>
+					</fieldset>
+					<fieldset>
+						<legend>Жирность:</legend>
+						<p><input type="radio" name="fat" value="0"> 0%</p>
+						<p><input type="radio" name="fat" value="<10" checked> до 10%</p>
+						<p><input type="radio" name="fat" value="<30"> до 30%</p>
+						<p><input type="radio" name="fat" value=">30"> выше 30%</p>
+					</fieldset>
+					<fieldset>
+						<legend>Наполнители:</legend>
+						<p><input type="checkbox" name="filler" value="chocolate" checked> шоколадные</p>
+						<p><input type="checkbox" name="filler" value="sugar" checked> сахарные присыпки</p>
+						<p><input type="checkbox" name="filler" value="fruits"> фрукты</p>
+						<p><input type="checkbox" name="filler" value="syrup"> сиропы</p>
+						<p><input type="checkbox" name="filler" value="jem"> джемы</p>
+					</fieldset>
+					<input type="button" value="Применить">
+				</form>
+			</div>
+			<section class="products">
+				<div class="owl-carousel owl-theme">
+					<div class="page-1">
+						<div class="item1">
+							<span class="price">310 &#x20bd;/кг</span>
+							<a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+						</div>
+						<div class="item2">
+							<span class="price">380 &#x20bd;/кг</span>
+							<a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>/
+						</div>
+						<div class="item3">
+							<span class="price">355 &#x20bd;/кг</span>
+							<a href="#">Сливочно-кофейное с кусочками шоколада</a>
+						</div>
+						<div class="item4">
+							<span class="price">415 &#x20bd;/кг</span>
+							<a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+						</div>
+						<div class="item5">
+							<span class="price">325 &#x20bd;/кг</span>
+							<a href="#">Сливочное с брусничным джемом </a>
+						</div>
+						<div class="item6">
+							<span class="price">410 &#x20bd;/кг</span>
+							<a href="#">Сливочно-черничное с цельными ягодами черники </a>
+						</div>
+						<div class="item7">
+							<span class="price">375 &#x20bd;/кг</span>
+							<a href="#">Сливочно-лимонное с карамельной присыпкой</a>
+						</div>
+						<div class="item8">
+							<span class="price">320 &#x20bd;/кг</span>
+							<a href="#">Сливочное с шоколадной стружкой</a>
+						</div>
+						<div class="item9">
+							<span class="price">440 &#x20bd;/кг</span>
+							<a href="#">Сливочно-ванильное с кусочками шоколада </a>
+						</div>
+						<div class="item10">
+							<span class="price">435 &#x20bd;/кг</span>
+							<a href="#">Сливочноe с ментоловым сиропом</a>
+						</div>
+						<div class="item11">
+							<span class="price">355 &#x20bd;/кг</span>
+							<a href="#">Сливочное с кусочками черного шоколада</a>
+						</div>
+						<div class="item12">
+							<span class="price">420 &#x20bd;/кг</span>
+							<a href="#">Сливочное с мятным сиропом</a>
+						</div>
+					</div>
+					<div class="page-2">
+						<div class="item1">
+							<span class="price">310 &#x20bd;/кг</span>
+							<a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+						</div>
+						<div class="item2">
+							<span class="price">380 &#x20bd;/кг</span>
+							<a href="#">Сливочно-клубничное с присыпкой из белого шоколада   </a>
+						</div>
+						<div class="item3">
+							<span class="price">355 &#x20bd;/кг</span>
+							<a href="#">Сливочно-кофейное с кусочками шоколада</a>
+						</div>
+						<div class="item4">
+							<span class="price">415 &#x20bd;/кг</span>
+							<a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+						</div>
+						<div class="item5">
+							<span class="price">325 &#x20bd;/кг</span>
+							<a href="#">Сливочное с брусничным джемом </a>
+						</div>
+						<div class="item6">
+							<span class="price">410 &#x20bd;/кг</span>
+							<a href="#">Сливочно-черничное с цельными ягодами черники </a>
+						</div>
+						<div class="item7">
+							<span class="price">375 &#x20bd;/кг</span>
+							<a href="#">Сливочно-лимонное с карамельной присыпкой</a>
+						</div>
+						<div class="item8">
+							<span class="price">320 &#x20bd;/кг</span>
+							<a href="#">Сливочное с шоколадной стружкой</a>
+						</div>
+						<div class="item9">
+							<span class="price">440 &#x20bd;/кг</span>
+							<a href="#">Сливочно-ванильное с кусочками шоколада </a>
+						</div>
+						<div class="item10">
+							<span class="price">435 &#x20bd;/кг</span>
+							<a href="#">Сливочноe с ментоловым сиропом</a>
+						</div>
+						<div class="item11">
+							<span class="price">355 &#x20bd;/кг</span>
+							<a href="#">Сливочное с кусочками черного шоколада</a>
+						</div>
+						<div class="item12">
+							<span class="price">420 &#x20bd;/кг</span>
+							<a href="#">Сливочное с мятным сиропом</a>
+						</div>
+					</div>
+					<div class="page-3">
+						<div class="item1">
+							<span class="price">310 &#x20bd;/кг</span>
+							<a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+						</div>
+						<div class="item2">
+							<span class="price">380 &#x20bd;/кг</span>
+							<a href="#">Сливочно-клубничное с присыпкой из белого шоколада   </a>
+						</div>
+						<div class="item3">
+							<span class="price">355 &#x20bd;/кг</span>
+							<a href="#">Сливочно-кофейное с кусочками шоколада</a>
+						</div>
+						<div class="item4">
+							<span class="price">415 &#x20bd;/кг</span>
+							<a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+						</div>
+						<div class="item5">
+							<span class="price">325 &#x20bd;/кг</span>
+							<a href="#">Сливочное с брусничным джемом </a>
+						</div>
+						<div class="item6">
+							<span class="price">410 &#x20bd;/кг</span>
+							<a href="#">Сливочно-черничное с цельными ягодами черники </a>
+						</div>
+						<div class="item7">
+							<span class="price">375 &#x20bd;/кг</span>
+							<a href="#">Сливочно-лимонное с карамельной присыпкой</a>
+						</div>
+						<div class="item8">
+							<span class="price">320 &#x20bd;/кг</span>
+							<a href="#">Сливочное с шоколадной стружкой</a>
+						</div>
+						<div class="item9">
+							<span class="price">440 &#x20bd;/кг</span>
+							<a href="#">Сливочно-ванильное с кусочками шоколада </a>
+						</div>
+						<div class="item10">
+							<span class="price">435 &#x20bd;/кг</span>
+							<a href="#">Сливочноe с ментоловым сиропом</a>
+						</div>
+						<div class="item11">
+							<span class="price">355 &#x20bd;/кг</span>
+							<a href="#">Сливочное с кусочками черного шоколада</a>
+						</div>
+						<div class="item12">
+							<span class="price">420 &#x20bd;/кг</span>
+							<a href="#">Сливочное с мятным сиропом</a>
+						</div>
+					</div>
+					<div class="page-4">
+						<div class="item1">
+							<span class="price">310 &#x20bd;/кг</span>
+							<a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+						</div>
+						<div class="item2">
+							<span class="price">380 &#x20bd;/кг</span>
+							<a href="#">Сливочно-клубничное с присыпкой из белого шоколада   </a>
+						</div>
+						<div class="item3">
+							<span class="price">355 &#x20bd;/кг</span>
+							<a href="#">Сливочно-кофейное с кусочками шоколада</a>
+						</div>
+						<div class="item4">
+							<span class="price">415 &#x20bd;/кг</span>
+							<a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+						</div>
+						<div class="item5">
+							<span class="price">325 &#x20bd;/кг</span>
+							<a href="#">Сливочное с брусничным джемом </a>
+						</div>
+						<div class="item6">
+							<span class="price">410 &#x20bd;/кг</span>
+							<a href="#">Сливочно-черничное с цельными ягодами черники </a>
+						</div>
+						<div class="item7">
+							<span class="price">375 &#x20bd;/кг</span>
+							<a href="#">Сливочно-лимонное с карамельной присыпкой</a>
+						</div>
+						<div class="item8">
+							<span class="price">320 &#x20bd;/кг</span>
+							<a href="#">Сливочное с шоколадной стружкой</a>
+						</div>
+						<div class="item9">
+							<span class="price">440 &#x20bd;/кг</span>
+							<a href="#">Сливочно-ванильное с кусочками шоколада </a>
+						</div>
+						<div class="item10">
+							<span class="price">435 &#x20bd;/кг</span>
+							<a href="#">Сливочноe с ментоловым сиропом</a>
+						</div>
+						<div class="item11">
+							<span class="price">355 &#x20bd;/кг</span>
+							<a href="#">Сливочное с кусочками черного шоколада</a>
+						</div>
+						<div class="item12">
+							<span class="price">420 &#x20bd;/кг</span>
+							<a href="#">Сливочное с мятным сиропом</a>
+						</div>
+					</div>
+					<div class="page-4">
+						<div class="item1">
+							<span class="price">310 &#x20bd;/кг</span>
+							<a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+						</div>
+						<div class="item2">
+							<span class="price">380 &#x20bd;/кг</span>
+							<a href="#">Сливочно-клубничное с присыпкой из белого шоколада   </a>
+						</div>
+						<div class="item3">
+							<span class="price">355 &#x20bd;/кг</span>
+							<a href="#">Сливочно-кофейное с кусочками шоколада</a>
+						</div>
+						<div class="item4">
+							<span class="price">415 &#x20bd;/кг</span>
+							<a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+						</div>
+						<div class="item5">
+							<span class="price">325 &#x20bd;/кг</span>
+							<a href="#">Сливочное с брусничным джемом </a>
+						</div>
+						<div class="item6">
+							<span class="price">410 &#x20bd;/кг</span>
+							<a href="#">Сливочно-черничное с цельными ягодами черники </a>
+						</div>
+						<div class="item7">
+							<span class="price">375 &#x20bd;/кг</span>
+							<a href="#">Сливочно-лимонное с карамельной присыпкой</a>
+						</div>
+						<div class="item8">
+							<span class="price">320 &#x20bd;/кг</span>
+							<a href="#">Сливочное с шоколадной стружкой</a>
+						</div>
+						<div class="item9">
+							<span class="price">440 &#x20bd;/кг</span>
+							<a href="#">Сливочно-ванильное с кусочками шоколада </a>
+						</div>
+						<div class="item10">
+							<span class="price">435 &#x20bd;/кг</span>
+							<a href="#">Сливочноe с ментоловым сиропом</a>
+						</div>
+						<div class="item11">
+							<span class="price">355 &#x20bd;/кг</span>
+							<a href="#">Сливочное с кусочками черного шоколада</a>
+						</div>
+						<div class="item12">
+							<span class="price">420 &#x20bd;/кг</span>
+							<a href="#">Сливочное с мятным сиропом</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="main-footer">
+			<div class="container">
+				<section class="footer-social">
+					<a href="#" class="social-btn social-btn-tw">Twitter</a>
+					<a href="#" class="social-btn social-btn-inst">Инстаграм</a>
+					<a href="#" class="social-btn social-btn-fb">Фейсбук</a>
+					<a href="#" class="social-btn social-btn-vk">Вконтакте</a>
+				</section>
+				<section class="footer-documents">
+					<table>
+						<tbody>
+							<tr>
+								<td><a href="#">Для поставщиков</a></td>
+								<td><a href="#">Наши документы</a></td>
+							</tr>
+							<tr>
+								<td><a href="#">О производствe</a></td>
+								<td><a href="#">Экологические стандарты</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				<section class="footer-copyright">
+					<img src="img/htmlacademy.svg" alt="HTML Academy logo" width="110" height="40">
+					Сделано в <a href="https://htmlacademy.ru" class="btn">HTML Academy</a> © 2016
+				</section>
+			</div>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script src="libs/owl-carousel/owl.carousel.min.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>
