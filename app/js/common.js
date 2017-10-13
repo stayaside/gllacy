@@ -1,4 +1,4 @@
-$( function() {
+$( function(){
     $( "#slider-range" ).slider({
       range: true,
       min: 0,
@@ -14,13 +14,14 @@ $( function() {
       "₽");
     $( "#amount-end" ).val( $( "#slider-range" ).slider( "values", 1 ) + 
       "₽");
-  } );
+});
 
 $(document).ready(function(){
   $(".owl-carousel").owlCarousel({
     loop:false,
     items:1,
     dots: true,
-    nav:true
+    nav:true,
+    center: true
   });
 });

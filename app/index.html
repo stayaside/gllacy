@@ -3,38 +3,49 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Gllacy Shop</title>
+		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="libs/owl-carousel/owl.carousel.min.css">
+		<link rel="stylesheet" href="libs/owl-carousel/owl.theme.default.min.css">
 	</head>
 	<body>
 		<header class="main-header">
-			<div class="container">
-				<div class="logo_navigation">
-					<div class="logo">
-						<img src="img/logo.svg" alt="Gllacy Shop" width="157" height="66">
+			<div class="container clearfix">
+				<div class="top-menu clearfix">
+					<div class="logo_navigation">
+						<div class="logo">
+							<img src="img/logo.svg" alt="Gllacy Shop" width="157" height="66">
+						</div>
+						<ul>
+							<li><a href="/catalog.html">Каталог</a></li>
+							<li><a href="#">Доставка и оплата</a></li>
+							<li><a href="#">О Компании</a></li>
+						</ul>
 					</div>
-					<ul>
-						<li><a href="/catalog.html">Каталог</a></li>
-						<li><a href="#">Доставка и оплата</a></li>
-						<li><a href="#">О Компании</a></li>
-					</ul>
-				</div>
-				<div class="user-block">
-					<input type="search">
-					<a href="#" class="login">Вход</a>
-					<a href="#" class="cart">Пусто</a>
+					<div class="user-block">
+						<input type="search">
+						<a href="#" class="login">Вход</a>
+						<a href="#" class="cart">Пусто</a>
+					</div>
 				</div>
 				<div class="info">
 					<p>С 10 до 20, ежедневно</p>
 					<p>8 812 450-25-25</p>
 				</div>
-				<div class="slider">
-					<div class="slide-one">
+				<div class="slide">
+					<div class="slide-text">
 						<p>Крем-брюле и пломбир<br>с малиновым джемом</p>
 						<a href="#" class="btn">Давайте оба!</a>
+					</div>
+					<div class="radio">
+						<input type="radio" name="slide" value="1" checked>
+						<input type="radio" name="slide" value="2">
+						<input type="radio" name="slide" value="3">
 					</div>
 				</div>
 			</div>
 		</header>
-		<main class="container">
+		<main class="container clearfix">
 			<section class="free">
 				<div class="free-left">
 					<h2>Малинка даром!</h2>
@@ -110,7 +121,7 @@
 			</div>
 		</main>
 		<footer class="main-footer">
-			<div class="container">
+			<div class="container clearfix">
 				<section class="footer-social">
 					<a href="#" class="social-btn social-btn-tw">Twitter</a>
 					<a href="#" class="social-btn social-btn-inst">Инстаграм</a>
@@ -137,5 +148,9 @@
 				</section>
 			</div>
 		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script src="libs/owl-carousel/owl.carousel.min.js"></script>
+		<script src="js/common.js"></script>
 	</body>
 </html>
