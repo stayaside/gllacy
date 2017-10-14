@@ -4,15 +4,126 @@ body {
   min-height: 1216px; //for net only
   margin: 0;
   padding: 0;
-  background-color: #849d8f;
+  font: 400 16px 'Roboto';
 }
-
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
 
 .radio {
     display: none;
+}
+
+.bg {
+  background-color: #849d8f;
+  background-image: url('../img/slide-1.png');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 27px;
+}
+
+.main-header {
+  padding-top: 8px;
+}
+
+.top-menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo_navigation {
+  display: flex;
+  justify-content: space-between;
+  li {
+    display: inline-block;
+  }
+}
+
+.info {
+  text-align: right;
+  p {
+    margin-top: 0;
+  }
+}
+
+.slider {
+  padding-top: 245px;
+  position: relative;
+  text-align: center;
+  width: 700px;
+  margin: 0 auto 40px;
+  h2 {
+    font: 900 60px/60.35px 'Roboto';
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 28px;
+  }
+}
+
+.btn {
+  display: inline-block;
+  background-image: linear-gradient(to top,#d8624e,#e27a3e);
+  border-radius: 40px;
+  vertical-align: baseline;
+  height: 50px;
+  width: 135px;
+}
+
+.slider-btn {
+  width: 282px;
+  height: 65px;
+}
+
+.slider-control {
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+  width: 100px;
+  height: 23px;
+  left: -225px;
+  label {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    background-color: #fff;
+    margin-right: 5px;
+    border-radius: 50%;
+  }
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  min-height: 230px;
+  padding: 0 25px;
+  margin-bottom: 40px;
+  .free {
+    width: 48.67%;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 10px;
+    position: relative;
+    a {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+    }
+  }
+}
+
+.hits {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.hit {
+  box-sizing: border-box;
+  border: 1px solid black;
+  width: 267px;
+  img:first-child {
+    position: absolute;
+  }
 }
