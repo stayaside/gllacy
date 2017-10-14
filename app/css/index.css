@@ -11,56 +11,6 @@ body {
   display: table;
   clear: both;
 }
-.container {
-  width: 1146px;
-  padding: 0 27px;
-  margin: 0 auto;
-  border: 1px solid black;
-}
-.main-header {
-  background: url('../img/slide-1.png') no-repeat 50% 0;
-}
-.logo_navigation {
-  float: left;
-}
-.logo_navigation .logo {
-  float: left;
-  position: relative;
-  left: -5px;
-}
-.logo_navigation ul {
-  float: right;
-}
-.user-block {
-  float: right;
-}
-.info {
-  float: right;
-}
-.slide {
-  min-height: 585px;
-  text-align: center;
-}
-.slide .slide-text {
-  position: relative;
-  top: 400px;
-  left: 80px;
-}
-.slide .radio {
-  float: left;
-  position: relative;
-  top: 450px;
-}
-.free {
-  margin-bottom: 40px;
-}
-.free-left {
-  float: left;
-  width: 560px;
-  height: 229px;
-}
-.free-right {
-  float: right;
-  width: 560px;
-  height: 229px;
+.radio {
+  display: none;
 }
