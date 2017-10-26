@@ -1,6 +1,6 @@
 html,
 body {
-  min-width: 1200px;
+  min-width: 900px; //поставь ширину, ниже которой верстка поплывет
   min-height: 1216px; //for net only
   margin: 0;
   padding: 0;
@@ -52,7 +52,7 @@ body {
   padding-top: 245px;
   position: relative;
   text-align: center;
-  width: 700px;
+  max-width: 700px;
   margin: 0 auto 40px;
   h2 {
     font: 900 60px/60.35px 'Roboto';
@@ -93,11 +93,13 @@ body {
   }
 }
 
-.row {
+//PRESENT
+
+.present {
   display: flex;
   justify-content: space-between;
   min-height: 230px;
-  padding: 0 25px;
+  margin: 0 25px;
   margin-bottom: 40px;
   .free {
     width: 48.67%;
@@ -113,17 +115,89 @@ body {
   }
 }
 
+//HITS
+
 .hits {
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;
+  margin: 0 25px 40px;
 }
 
 .hit {
   box-sizing: border-box;
-  border: 1px solid black;
-  width: 267px;
+  max-width: 267px;
   img:first-child {
     position: absolute;
   }
+}
+
+//ABOUT
+
+.about {
+  margin: 0 25px 40px;
+  background-color: #eae0c5;
+  background-image: url('../img/waffle-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  border-radius: 10px;
+  min-height: 300px;
+}
+
+//BLOG
+
+.blog-mail {
+  display: flex;
+  justify-content: space-between;
+  min-height: 220px;
+  margin: 0 25px 40px;
+  .col {
+    width: 48.67%;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 10px;
+    position: relative;
+  }
+  .blog {
+    background-color: #fff;
+    background-image: url('../img/strawberry-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    padding: 20px;
+  }
+  .mail {
+    background-color: #f7f6f3;
+    background-image: url('../img/mail-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    padding: 20px;
+  }
+}
+
+//MAP
+
+.map {
+  background-color: rgb(224, 224, 224);
+  background-image: url('../img/map.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  min-height: 430px;
+  position: relative;
+  .address {
+    position: absolute;
+    background-color: #fff;
+    width: 305px;
+    right: 20px;
+    bottom: 58px;
+    border-radius: 10px;
+    padding: 25px;
+  }
+}
+
+//FOOTER  
+
+.main-footer {
+  padding: 18px 20px 25px;
+  display: flex;
+  justify-content: space-between;
 }

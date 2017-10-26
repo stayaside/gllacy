@@ -1,6 +1,6 @@
 html,
 body {
-  min-width: 1200px;
+  min-width: 900px;
   min-height: 1216px;
   margin: 0;
   padding: 0;
@@ -56,7 +56,7 @@ body {
   padding-top: 245px;
   position: relative;
   text-align: center;
-  width: 700px;
+  max-width: 700px;
   margin: 0 auto 40px;
 }
 .slider h2 {
@@ -101,7 +101,7 @@ body {
   -webkit-border-radius: 50%;
           border-radius: 50%;
 }
-.row {
+.present {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -111,10 +111,10 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   min-height: 230px;
-  padding: 0 25px;
+  margin: 0 25px;
   margin-bottom: 40px;
 }
-.row .free {
+.present .free {
   width: 48.67%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -123,7 +123,7 @@ body {
           border-radius: 10px;
   position: relative;
 }
-.row .free a {
+.present .free a {
   position: absolute;
   right: 20px;
   bottom: 20px;
@@ -138,13 +138,87 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 40px;
+  margin: 0 25px 40px;
 }
 .hit {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 1px solid black;
-  width: 267px;
+  max-width: 267px;
 }
 .hit img:first-child {
   position: absolute;
+}
+.about {
+  margin: 0 25px 40px;
+  background-color: #eae0c5;
+  background-image: url('../img/waffle-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  min-height: 300px;
+}
+.blog-mail {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 220px;
+  margin: 0 25px 40px;
+}
+.blog-mail .col {
+  width: 48.67%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid black;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  position: relative;
+}
+.blog-mail .blog {
+  background-color: #fff;
+  background-image: url('../img/strawberry-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  padding: 20px;
+}
+.blog-mail .mail {
+  background-color: #f7f6f3;
+  background-image: url('../img/mail-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  padding: 20px;
+}
+.map {
+  background-color: #e0e0e0;
+  background-image: url('../img/map.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  min-height: 430px;
+  position: relative;
+}
+.map .address {
+  position: absolute;
+  background-color: #fff;
+  width: 305px;
+  right: 20px;
+  bottom: 58px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  padding: 25px;
+}
+.main-footer {
+  padding: 18px 20px 25px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
