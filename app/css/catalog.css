@@ -1,0 +1,122 @@
+html,
+body {
+  min-width: 900px;
+  min-height: 1216px;
+  margin: 0;
+  padding: 0;
+  font: 400 16px 'Roboto', sans-serif;
+  background-color: #93a89b;
+  color: #fff;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+a:hover {
+  text-decoration: underline;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 27px;
+}
+.container h1 {
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+.main-header {
+  padding-top: 8px;
+  position: relative;
+}
+.top-menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.logo_navigation {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.logo_navigation li {
+  display: inline-block;
+}
+.info {
+  position: absolute;
+  right: 0;
+  text-align: right;
+}
+.info p {
+  margin-top: 0;
+}
+.breadcrumps li {
+  display: inline-block;
+}
+.sort-form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 40px;
+}
+.sort-form form {
+  width: 100%;
+}
+.sort-form form fieldset {
+  display: inline-block;
+}
+.page {
+  margin-bottom: 80px;
+}
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 25px 40px;
+}
+.item {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 267px;
+}
+.paginator {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 35px;
+}
+.paginator li {
+  display: inline-block;
+}
+.main-footer {
+  border-top: 1px solid #fff;
+  padding: 18px 20px 25px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}

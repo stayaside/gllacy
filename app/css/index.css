@@ -140,12 +140,12 @@ body {
   margin-bottom: 40px;
   margin: 0 25px 40px;
 }
-.hit {
+.item {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   max-width: 267px;
 }
-.hit img:first-child {
+.item img:first-child {
   position: absolute;
 }
 .about {
