@@ -1,7 +1,6 @@
 html,
 body {
-  min-width: 900px;
-  min-height: 1216px;
+  min-width: 1200px;
   margin: 0;
   padding: 0;
   font: 400 16px Roboto, Arial, sans-serif;
@@ -121,6 +120,16 @@ a {
 .logo img {
   width: 154px;
   height: 64px;
+}
+.logo {
+  /* position: relative; */
+  width: 178px;
+}
+.logo img {
+  /* position: absolute; */
+  width: 157px;
+  height: 66px;
+  /* left: 20px; */
 }
 .info {
   text-align: right;
