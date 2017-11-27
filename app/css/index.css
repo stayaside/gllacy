@@ -121,47 +121,220 @@ a {
 .sub-menu li:active {
   background-color: #f6b5a5;
 }
+.user-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 15px;
+  padding-right: 27px;
+  font-size: 14px;
+  font-weight: 500;
+}
 .search {
-  width: 35px;
-  height: 35px;
-  background: rgba(255, 255, 255, 0.2) url('../img/menu-sprite.png') no-repeat -8% 50%;
-  position: relative;
   display: inline-block;
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.2) url('../img/menu-sprite.png') no-repeat 30% 99%;
+  position: relative;
   -webkit-border-radius: 50%;
           border-radius: 50%;
+  -webkit-transition: 0.5s background-color;
+  -o-transition: 0.5s background-color;
+  transition: 0.5s background-color;
 }
-.search input[type="search"] {
+.search .search-popup {
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
   opacity: 0;
+  padding: 15px;
+  background-color: #f8f7f4;
   z-index: -1;
   position: absolute;
-  left: -200px;
-  top: 50px;
+  left: -240px;
+  top: 35px;
   -webkit-transition: .5s all;
   -o-transition: .5s all;
   transition: .5s all;
+  min-width: 242px;
 }
-.search:hover input[type="search"] {
+.search .search-popup input {
+  padding: 10px 8px;
+  width: 100%;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  border: 1px solid #d3d3d2;
+  -webkit-transition: 1s all;
+  -o-transition: 1s all;
+  transition: 1s all;
+}
+.search:hover {
+  background-color: #f8f7f4;
+  background-position: 30% 83%;
+}
+.search:hover .search-popup {
   opacity: 1;
   z-index: 2;
 }
 .login {
-  display: inline-block;
-  width: 93px;
+  position: relative;
+}
+.login-popup {
+  position: absolute;
+  background-color: #f8f7f4;
+  padding: 15px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  top: 35px;
+  right: 0px;
+  min-width: 252px;
+  z-index: -1;
+  opacity: 0;
+}
+.login-popup input {
+  padding: 10px 8px;
+  width: 93%;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  border: 1px solid #d3d3d2;
+  margin-bottom: 10px;
+}
+.login-popup .btn {
+  width: 35%;
+  -webkit-border-radius: 25px;
+          border-radius: 25px;
+  border: none;
+  font-weight: 700;
   height: 35px;
+  font-size: 14px;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 0;
+}
+.login-popup a {
+  display: block;
+  color: #333333;
+  font-size: 13px;
+  font-weight: 400;
+}
+.login-button {
+  display: inline-block;
+  height: 20px;
+  padding: 8px 17px 5px 43px;
+  margin-left: 10px;
   position: relative;
   background-color: rgba(255, 255, 255, 0.2);
-  padding-left: 50px;
   -webkit-border-radius: 20px;
           border-radius: 20px;
+  text-decoration: none;
+  -webkit-transition: .5s all;
+  -o-transition: .5s all;
+  transition: .5s all;
 }
-.login::before {
+.login-button::before {
   content: '';
   position: absolute;
   width: 25px;
   height: 35px;
-  background: url('../img/menu-sprite.png') no-repeat 40% 50%;
-  top: -5px;
-  left: 0px;
+  background: url('../img/menu-sprite.png') no-repeat 40% 13%;
+  top: -2px;
+  left: 11px;
+}
+.login-button:hover {
+  background-color: #f8f7f4;
+  color: #323232;
+}
+.login-button:hover::before {
+  background-position: 40% -5%;
+}
+.login-button:hover ~ .login-popup {
+  opacity: 1;
+  z-index: 2;
+  -webkit-transition: 1s all;
+  -o-transition: 1s all;
+  transition: 1s all;
+}
+.cart {
+  position: relative;
+}
+.cart-button {
+  display: inline-block;
+  max-height: 20px;
+  padding: 8px 34px 8px 43px;
+  margin-left: 10px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.2);
+  -webkit-border-radius: 20px;
+          border-radius: 20px;
+  text-decoration: none;
+  -webkit-transition: .5s all;
+  -o-transition: .5s all;
+  transition: .5s all;
+}
+.cart-button::before {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 35px;
+  background: url('../img/menu-sprite.png') no-repeat 50% 65%;
+  top: -4px;
+  left: 13px;
+}
+.cart-button:hover {
+  background-color: #f8f7f4;
+  color: #323232;
+}
+.cart-button:hover::before {
+  background-position: 50% 29%;
+}
+.cart-popup {
+  position: absolute;
+  right: 0;
+  top: 35px;
+  background-color: #f8f7f4;
+  min-width: 250px;
+  font-weight: 400;
+  padding: 15px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+}
+.cart-popup .btn {
+  -webkit-border-radius: 25px;
+          border-radius: 25px;
+  font-weight: 700;
+  height: 35px;
+  font-size: 14px;
+  float: right;
+  margin-bottom: 0;
+}
+.icon-remove {
+  position: relative;
+}
+.icon-remove::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 1px;
+  height: 15px;
+  background-color: #353535;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+      -ms-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+}
+.icon-remove::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 1px;
+  height: 15px;
+  background-color: #353535;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+      -ms-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+}
+.cart-sum {
+  font-weight: 700;
+  border-top: 1px solid black;
 }
 .info {
   text-align: right;
@@ -184,15 +357,21 @@ a {
 }
 .btn {
   display: inline-block;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#d8624e), to(#e27a3e));
-  background-image: -webkit-linear-gradient(bottom, #d8624e, #e27a3e);
-  background-image: -o-linear-gradient(bottom, #d8624e, #e27a3e);
-  background-image: linear-gradient(to top, #d8624e, #e27a3e);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#e74b36), to(#f26843));
+  background-image: -webkit-linear-gradient(bottom, #e74b36, #f26843);
+  background-image: -o-linear-gradient(bottom, #e74b36, #f26843);
+  background-image: linear-gradient(to top, #e74b36, #f26843);
   -webkit-border-radius: 40px;
           border-radius: 40px;
   vertical-align: baseline;
-  height: 50px;
+  height: 45px;
   width: 135px;
+  text-decoration: none;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  border: none;
+  color: #ffffff;
 }
 .slider-btn {
   width: 282px;

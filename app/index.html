@@ -50,10 +50,52 @@
 					</div>
 					<div class="user-block">
 						<div class="search">
-							<input type="search">
+							<div class="search-popup">
+								<input type="search" placeholder="Что ищем?" name="search">
+							</div>
 						</div>
-						<a href="#" class="login">Вход</a>
-						<a href="#" class="cart">Пусто</a>
+						<div class="login">
+							<a href="#" class="login-button">Вход</a>
+							<div class="login-popup">
+								<input type="email" name="email" id="mail" placeholder="Электронная почта">
+								<input type="password" name="pass" id="password" placeholder="Пароль">
+								<input type="submit" value="Войти" class="btn">
+								<a href="#">Забыли пароль?</a>
+								<a href="#">Новая регистрация</a>
+							</div>
+						</div>
+						<div class="cart">
+							<a href="#" class="cart-button">Пусто</a>
+							<div class="cart-popup">
+								<table>
+									<tr>
+										<td class="icon-remove"></td>
+										<td></td>
+										<td>Пломбир с апельсиновым джемом</td>
+										<td>1,5 кг</td>
+										<td>х</td>
+										<td>200 руб.</td>
+										<td>300 руб.</td>
+									</tr>
+									<tr>
+										<td class="icon-remove"></td>
+										<td></td>
+										<td>Клубничный пломбир с присыпкой из белого шоколада</td>
+										<td>1,5 кг</td>
+										<td>х</td>
+										<td>300 руб.</td>
+										<td>450 руб.</td>
+									</tr>
+									<tr class="cart-sum">
+										<td colspan="5"></td>
+										<td>Итого:</td>
+										<td>750 руб.</td>
+									</tr>
+								</table>
+								<input type="submit" value="Оформить заказ" class="btn">	
+							</div>
+						</div>
+
 					</div>
 				</div>
 				<div class="info">
