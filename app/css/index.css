@@ -247,7 +247,7 @@ a {
 .login-button:hover::before {
   background-position: 40% -5%;
 }
-.login-button:hover ~ .login-popup {
+.login:hover > .login-popup {
   opacity: 1;
   z-index: 2;
   -webkit-transition: 1s all;
@@ -292,28 +292,55 @@ a {
   right: 0;
   top: 35px;
   background-color: #f8f7f4;
-  min-width: 250px;
+  width: 510px;
   font-weight: 400;
   padding: 15px;
   -webkit-border-radius: 5px;
           border-radius: 5px;
+  font-size: 13px;
+}
+.cart-popup table {
+  border-collapse: collapse;
 }
 .cart-popup .btn {
   -webkit-border-radius: 25px;
           border-radius: 25px;
   font-weight: 700;
-  height: 35px;
   font-size: 14px;
   float: right;
   margin-bottom: 0;
 }
-.icon-remove {
+.cart-popup img {
+  width: 33px;
+  height: 33px;
+}
+.cart-popup td {
+  padding-right: 14px;
+  padding-bottom: 20px;
+  white-space: nowrap;
+}
+.cart-popup td:nth-child(4),
+.cart-popup td:nth-child(5) {
+  padding-right: 0;
+}
+.cart-popup td:nth-child(3) {
+  white-space: normal;
+  padding-right: 30px;
+  width: 100%;
+}
+.cart-popup td:nth-child(6) {
+  padding-right: 25px;
+}
+.cart-popup td:nth-child(7) {
+  padding-right: 20px;
+}
+.cart-remove {
   position: relative;
 }
-.icon-remove::before {
+.cart-remove::before {
   content: '';
   position: absolute;
-  top: 50%;
+  top: 30%;
   width: 1px;
   height: 15px;
   background-color: #353535;
@@ -321,10 +348,10 @@ a {
       -ms-transform: translate(-50%, -50%) rotate(45deg);
           transform: translate(-50%, -50%) rotate(45deg);
 }
-.icon-remove::after {
+.cart-remove::after {
   content: '';
   position: absolute;
-  top: 50%;
+  top: 30%;
   width: 1px;
   height: 15px;
   background-color: #353535;
@@ -332,9 +359,26 @@ a {
       -ms-transform: translate(-50%, -50%) rotate(-45deg);
           transform: translate(-50%, -50%) rotate(-45deg);
 }
+.cart-pale {
+  color: #7f7f7f;
+}
 .cart-sum {
   font-weight: 700;
-  border-top: 1px solid black;
+  font-size: 15px;
+  text-align: right;
+}
+.cart-sum td {
+  padding-top: 15px;
+  padding-right: 0;
+  border-top: 1px solid #cacac7;
+}
+.cart-sum td:nth-child(3) {
+  padding-right: 0;
+}
+.cart-sum td:last-child {
+  padding-right: 10px;
+  padding-left: 5px;
+  text-align: right;
 }
 .info {
   text-align: right;
@@ -364,14 +408,21 @@ a {
   -webkit-border-radius: 40px;
           border-radius: 40px;
   vertical-align: baseline;
-  height: 45px;
-  width: 135px;
   text-decoration: none;
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
   cursor: pointer;
   border: none;
   color: #ffffff;
+  padding: 10px 20px;
+}
+.btn:active {
+  -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#f26843), to(#e74b36));
+  background-image: -webkit-linear-gradient(bottom, #f26843, #e74b36);
+  background-image: -o-linear-gradient(bottom, #f26843, #e74b36);
+  background-image: linear-gradient(to top, #f26843, #e74b36);
 }
 .slider-btn {
   width: 282px;
