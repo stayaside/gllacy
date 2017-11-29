@@ -27,6 +27,37 @@ a {
   color: #fff;
 }
 
+.btn {
+  display: inline-block;
+  position: relative;
+  background-image: linear-gradient(to top, #e74b36, #f26843);
+  border-radius: 40px;
+  vertical-align: baseline;
+  text-decoration: none;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  border: none;
+  color: #ffffff;
+  padding: 10px 20px;
+  &:hover::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0px; left: 0px;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    background: rgba(255, 255, 255, .2);
+  }
+  &:active {
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(to top, #f26843, #e74b36);
+    &::before {
+      background: transparent;
+    }
+  }
+}
+
 //HEADER
 .main-header {
   padding-top: 8px;
@@ -121,6 +152,8 @@ a {
   font-weight: 500;
 }
 
+//SEARCH FIELD
+
 .search {
   display: inline-block;
   width: 32px;
@@ -158,6 +191,10 @@ a {
   }
 }
 
+//SEARCH FIELD END
+
+//LOGIN FORM
+
 .login {
   position: relative;
 }
@@ -181,8 +218,6 @@ a {
   }
   .btn {
     width: 35%;
-    border-radius: 25px;
-    border: none;
     font-weight: 700;
     height: 35px;
     font-size: 14px;
@@ -231,6 +266,10 @@ a {
   z-index: 2;
   transition: 1s all;
 }
+
+//LOGIN FORM END
+
+//CART
 
 .cart {
   position: relative;
@@ -307,10 +346,14 @@ a {
       padding-right: 20px;
     }
   }
+  tr:last-child td {
+    border-bottom: 1px solid #cacac7;
+  }
 }
 
 .cart-remove {
   position: relative;
+  cursor: pointer;
   &::before {
     content: '';
     position: absolute;
@@ -339,20 +382,12 @@ a {
   font-weight: 700;
   font-size: 15px;
   text-align: right;
-  td {
-    padding-top: 15px;
-    padding-right: 0;
-    border-top: 1px solid #cacac7;
-    &:nth-child(3) {
-      padding-right: 0;
-    }
-    &:last-child {
-      padding-right: 10px;
-      padding-left: 5px;
-      text-align: right;
-    }
-  }
+  padding: 15px 10px;
 }
+
+//CART END
+
+//INFO FROM RIGHT SIDE
 
 .info {
   text-align: right;
@@ -372,23 +407,6 @@ a {
     color: #fff;
     margin-top: 0;
     margin-bottom: 28px;
-  }
-}
-
-.btn {
-  display: inline-block;
-  background-image: linear-gradient(to top, #e74b36, #f26843);
-  border-radius: 40px;
-  vertical-align: baseline;
-  text-decoration: none;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-  border: none;
-  color: #ffffff;
-  padding: 10px 20px;
-  &:active {
-    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5);
-    background-image: linear-gradient(to top, #f26843, #e74b36);
   }
 }
 
