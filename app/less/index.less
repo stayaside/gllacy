@@ -39,22 +39,13 @@ a {
   border: none;
   color: #ffffff;
   padding: 10px 20px;
-  &:hover::before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0px; left: 0px;
-    width: 100%;
-    height: 100%;
-    border-radius: 40px;
-    background: rgba(255, 255, 255, .2);
+  font-weight: 700;
+  &:hover {
+    background-image: linear-gradient(to top, #ec6f5e, #f58669);
   }
   &:active {
     box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5);
-    background-image: linear-gradient(to top, #f26843, #e74b36);
-    &::before {
-      background: transparent;
-    }
+
   }
 }
 
@@ -66,6 +57,7 @@ a {
 .top-menu {
   display: flex;
   justify-content: space-between;
+
 }
 
 .logo {
@@ -126,7 +118,7 @@ a {
   font-weight: 400;
   font-size: 14px;
   border-radius: 5px;
-  box-shadow: 0px 15px 20px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 15px 20px 3px rgba(0, 0, 0, 0.4);
   li {
     padding: 10px 20px;
     cursor: pointer;
@@ -173,6 +165,7 @@ a {
     top: 35px;
     transition: .5s all;
     min-width: 242px;
+    box-shadow: 0px 15px 20px 3px rgba(0, 0, 0, 0.4);
     input {
       padding: 10px 8px;
       width: 100%;
@@ -209,6 +202,7 @@ a {
   min-width: 252px;
   z-index: -1;
   opacity: 0;
+  box-shadow: 0px 15px 20px 3px rgba(0, 0, 0, 0.4);
   input {
     padding: 10px 8px;
     width: 93%;
@@ -218,12 +212,16 @@ a {
   }
   .btn {
     width: 35%;
-    font-weight: 700;
     height: 35px;
-    font-size: 14px;
+    font-size: 15px;
     float: left;
     margin-right: 20px;
     margin-bottom: 0;
+    border-radius: 40px;
+    border: none;
+    &:hover {
+      background-image: linear-gradient(to top, #ec6f5e, #f58669);
+    }
   }
   a {
     display: block;
@@ -290,7 +288,7 @@ a {
     position: absolute;
     width: 25px;
     height: 35px;
-    background: url('../img/menu-sprite.png') no-repeat 50% 65%;
+    background: url('../img/menu-sprite.png') no-repeat 50% 47%;
     top: -4px;
     left: 13px;
   }
@@ -313,15 +311,19 @@ a {
   padding: 15px;
   border-radius: 5px;
   font-size: 13px;
+  opacity: 0;
+  z-index: -1;
+  box-shadow: 0px 15px 20px 3px rgba(0, 0, 0, 0.4);
   table {
     border-collapse: collapse; 
   }
   .btn {
-    border-radius: 25px;
-    font-weight: 700;
-    font-size: 14px;
+    font-size: 15px;
     float: right;
     margin-bottom: 0;
+    &:hover {
+      background-image: linear-gradient(to top, #ec6f5e, #f58669);
+    }
   }
   img {
     width: 33px;
@@ -349,6 +351,12 @@ a {
   tr:last-child td {
     border-bottom: 1px solid #cacac7;
   }
+}
+
+.cart:hover>.cart-popup {
+  opacity: 1;
+  z-index: 2;
+  transition: 1s all;
 }
 
 .cart-remove {
@@ -391,8 +399,18 @@ a {
 
 .info {
   text-align: right;
+  color: #ffffff;
+  padding-right: 27px;
   p {
     margin-top: 0;
+    &:first-of-type {
+      font-weight: 700;
+      font-size: 14px;
+    }
+    &:last-of-type {
+      font-weight: 900;
+      font-size: 22px;
+    }
   }
 }
 

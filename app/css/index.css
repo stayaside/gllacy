@@ -39,29 +39,17 @@ a {
   border: none;
   color: #ffffff;
   padding: 10px 20px;
+  font-weight: 700;
 }
-.btn:hover::before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  -webkit-border-radius: 40px;
-          border-radius: 40px;
-  background: rgba(255, 255, 255, 0.2);
+.btn:hover {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#ec6f5e), to(#f58669));
+  background-image: -webkit-linear-gradient(bottom, #ec6f5e, #f58669);
+  background-image: -o-linear-gradient(bottom, #ec6f5e, #f58669);
+  background-image: linear-gradient(to top, #ec6f5e, #f58669);
 }
 .btn:active {
   -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5);
           box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5);
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#f26843), to(#e74b36));
-  background-image: -webkit-linear-gradient(bottom, #f26843, #e74b36);
-  background-image: -o-linear-gradient(bottom, #f26843, #e74b36);
-  background-image: linear-gradient(to top, #f26843, #e74b36);
-}
-.btn:active::before {
-  background: transparent;
 }
 .main-header {
   padding-top: 8px;
@@ -142,8 +130,8 @@ a {
   font-size: 14px;
   -webkit-border-radius: 5px;
           border-radius: 5px;
-  -webkit-box-shadow: 0px 15px 20px 3px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 15px 20px 3px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 15px 20px 3px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 15px 20px 3px rgba(0, 0, 0, 0.4);
 }
 .sub-menu li {
   padding: 10px 20px;
@@ -198,6 +186,8 @@ a {
   -o-transition: .5s all;
   transition: .5s all;
   min-width: 242px;
+  -webkit-box-shadow: 0px 15px 20px 3px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 15px 20px 3px rgba(0, 0, 0, 0.4);
 }
 .search .search-popup input {
   padding: 10px 8px;
@@ -231,6 +221,8 @@ a {
   min-width: 252px;
   z-index: -1;
   opacity: 0;
+  -webkit-box-shadow: 0px 15px 20px 3px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 15px 20px 3px rgba(0, 0, 0, 0.4);
 }
 .login-popup input {
   padding: 10px 8px;
@@ -242,12 +234,20 @@ a {
 }
 .login-popup .btn {
   width: 35%;
-  font-weight: 700;
   height: 35px;
-  font-size: 14px;
+  font-size: 15px;
   float: left;
   margin-right: 20px;
   margin-bottom: 0;
+  -webkit-border-radius: 40px;
+          border-radius: 40px;
+  border: none;
+}
+.login-popup .btn:hover {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#ec6f5e), to(#f58669));
+  background-image: -webkit-linear-gradient(bottom, #ec6f5e, #f58669);
+  background-image: -o-linear-gradient(bottom, #ec6f5e, #f58669);
+  background-image: linear-gradient(to top, #ec6f5e, #f58669);
 }
 .login-popup a {
   display: block;
@@ -314,7 +314,7 @@ a {
   position: absolute;
   width: 25px;
   height: 35px;
-  background: url('../img/menu-sprite.png') no-repeat 50% 65%;
+  background: url('../img/menu-sprite.png') no-repeat 50% 47%;
   top: -4px;
   left: 13px;
 }
@@ -336,17 +336,24 @@ a {
   -webkit-border-radius: 5px;
           border-radius: 5px;
   font-size: 13px;
+  opacity: 0;
+  z-index: -1;
+  -webkit-box-shadow: 0px 15px 20px 3px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 15px 20px 3px rgba(0, 0, 0, 0.4);
 }
 .cart-popup table {
   border-collapse: collapse;
 }
 .cart-popup .btn {
-  -webkit-border-radius: 25px;
-          border-radius: 25px;
-  font-weight: 700;
-  font-size: 14px;
+  font-size: 15px;
   float: right;
   margin-bottom: 0;
+}
+.cart-popup .btn:hover {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#ec6f5e), to(#f58669));
+  background-image: -webkit-linear-gradient(bottom, #ec6f5e, #f58669);
+  background-image: -o-linear-gradient(bottom, #ec6f5e, #f58669);
+  background-image: linear-gradient(to top, #ec6f5e, #f58669);
 }
 .cart-popup img {
   width: 33px;
@@ -374,6 +381,13 @@ a {
 }
 .cart-popup tr:last-child td {
   border-bottom: 1px solid #cacac7;
+}
+.cart:hover > .cart-popup {
+  opacity: 1;
+  z-index: 2;
+  -webkit-transition: 1s all;
+  -o-transition: 1s all;
+  transition: 1s all;
 }
 .cart-remove {
   position: relative;
@@ -412,9 +426,19 @@ a {
 }
 .info {
   text-align: right;
+  color: #ffffff;
+  padding-right: 27px;
 }
 .info p {
   margin-top: 0;
+}
+.info p:first-of-type {
+  font-weight: 700;
+  font-size: 14px;
+}
+.info p:last-of-type {
+  font-weight: 900;
+  font-size: 22px;
 }
 .slider {
   padding-top: 245px;
