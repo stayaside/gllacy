@@ -50,9 +50,14 @@ a {
 .btn:active {
   -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5);
           box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#f26843), to(#e74b36));
+  background-image: -webkit-linear-gradient(bottom, #f26843, #e74b36);
+  background-image: -o-linear-gradient(bottom, #f26843, #e74b36);
+  background-image: linear-gradient(to top, #f26843, #e74b36);
 }
 .main-header {
   padding-top: 8px;
+  position: relative;
 }
 .top-menu {
   display: -webkit-box;
@@ -249,6 +254,12 @@ a {
   background-image: -o-linear-gradient(bottom, #ec6f5e, #f58669);
   background-image: linear-gradient(to top, #ec6f5e, #f58669);
 }
+.login-popup .btn:active {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#f26843), to(#e74b36));
+  background-image: -webkit-linear-gradient(bottom, #f26843, #e74b36);
+  background-image: -o-linear-gradient(bottom, #f26843, #e74b36);
+  background-image: linear-gradient(to top, #f26843, #e74b36);
+}
 .login-popup a {
   display: block;
   color: #333333;
@@ -355,6 +366,12 @@ a {
   background-image: -o-linear-gradient(bottom, #ec6f5e, #f58669);
   background-image: linear-gradient(to top, #ec6f5e, #f58669);
 }
+.cart-popup .btn:active {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#f26843), to(#e74b36));
+  background-image: -webkit-linear-gradient(bottom, #f26843, #e74b36);
+  background-image: -o-linear-gradient(bottom, #f26843, #e74b36);
+  background-image: linear-gradient(to top, #f26843, #e74b36);
+}
 .cart-popup img {
   width: 33px;
   height: 33px;
@@ -428,6 +445,9 @@ a {
   text-align: right;
   color: #ffffff;
   padding-right: 27px;
+  position: absolute;
+  right: 0;
+  top: 72px;
 }
 .info p {
   margin-top: 0;
@@ -435,13 +455,14 @@ a {
 .info p:first-of-type {
   font-weight: 700;
   font-size: 14px;
+  margin-bottom: 2px;
 }
 .info p:last-of-type {
   font-weight: 900;
   font-size: 22px;
 }
 .slider {
-  padding-top: 245px;
+  padding-top: 312px;
   position: relative;
   text-align: center;
   max-width: 700px;
@@ -451,11 +472,13 @@ a {
   font: 900 60px/60.35px 'Roboto';
   color: #fff;
   margin-top: 0;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 }
-.slider-btn {
-  width: 282px;
-  height: 65px;
+.slider .btn {
+  width: 240px;
+  height: 45px;
+  font-size: 31.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 .slider-control {
   position: absolute;
@@ -466,16 +489,21 @@ a {
   display: flex;
   width: 100px;
   height: 23px;
-  left: -225px;
+  left: -222px;
+  bottom: 20px;
 }
 .slider-control label {
   display: inline-block;
-  width: 23px;
-  height: 23px;
-  background-color: #fff;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #fff;
   margin-right: 5px;
   -webkit-border-radius: 50%;
           border-radius: 50%;
+}
+.slider-control label:hover {
+  background-color: rgba(255, 255, 255, 0.4);
 }
 .present {
   display: -webkit-box;
