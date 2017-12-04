@@ -11,10 +11,9 @@ body {
 }
 
 .bg {
-  background-color: #849d8f;
-  background-image: url('../img/slide-1.png');
   background-repeat: no-repeat;
   background-position: 50% 0;
+  transition: 1s all;
 }
 
 .container {
@@ -447,6 +446,31 @@ a {
   }
 }
 
+.slider-inner {
+  overflow: hidden;
+}
+
+.slider-slides {
+  width: 300%;
+  transition: transform 0.8s ease;
+  h2 {
+    float: right;
+    max-width: 700px;
+  }
+}
+
+#slide-1:checked ~ .bg .slider-inner .slider-slides { 
+  transform: translate(0); 
+}
+
+#slide-2:checked ~ .bg .slider-inner .slider-slides { 
+  transform: translate(-33.3%); 
+}
+
+#slide-3:checked ~ .bg .slider-inner .slider-slides { 
+  transform: translate(-66.6%); 
+}
+
 .slider-control {
   position: absolute;
   bottom: 30px;
@@ -466,7 +490,31 @@ a {
     &:hover {
       background-color: rgba(255, 255, 255, 0.4);
     }
+    &:active {
+      background-color: black;
+    }
   }
+}
+
+#slide-1:checked ~ .bg .slider-control label[for="slide-1"],
+#slide-2:checked ~ .bg .slider-control label[for="slide-2"],
+#slide-3:checked ~ .bg .slider-control label[for="slide-3"] {
+    background-color: #fff;
+}
+
+#slide-1:checked ~ .bg { 
+  background-color: #849d8f;
+  background-image: url('../img/slide-1.png');
+}
+
+#slide-2:checked ~ .bg { 
+  background-color: #8996a6;
+  background-image: url('../img/slide-2.png');
+}
+
+#slide-3:checked ~ .bg { 
+  background-color: #9d8b84;
+  background-image: url('../img/slide-3.png');
 }
 
 //PRESENT
@@ -474,36 +522,107 @@ a {
   display: flex;
   justify-content: space-between;
   min-height: 230px;
-  margin: 0 25px;
-  margin-bottom: 40px;
+  margin: 0 27px;
+  margin-bottom: 30px;
+  color: #ffffff;
   .free {
-    width: 48.67%;
+    width: 560px;
     box-sizing: border-box;
-    border: 1px solid black;
-    border-radius: 10px;
+    border-radius: 17px;
     position: relative;
+    padding: 20px;
+    font-weight: 700;
+    font-size: 18px;
+    &-left {
+      background-image: url('../img/malina-bg.jpg');
+    }
+    &-right {
+      background-image: url('../img/choco-bg.jpg');
+    }
     a {
       position: absolute;
-      right: 20px;
-      bottom: 20px;
+      right: 25px;
+      bottom: 25px;
+    }
+    h2 {
+      font-size: 35px;
+      margin: 0;
+      line-height: 35px;
     }
   }
 }
+
+
 
 //HITS
 .hits {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 40px;
-  margin: 0 25px 40px;
+  margin: 0 17px;
 }
 
 .item {
   box-sizing: border-box;
-  max-width: 267px;
-  img:first-child {
-    position: absolute;
+  max-width: 287px;
+  position: relative;
+  padding: 10px;
+  padding-bottom: 0;
+  cursor: pointer;
+  transition: 1s all; 
+  border-radius: 5px;
+  z-index: 1;
+  img {
+    &:first-child {
+      position: absolute;
+    }
   }
+  &:hover {
+    margin-bottom: -50px;
+    &::after {
+      content: '';
+      position: absolute;
+      transform: translate(-50%,-50%);
+      width: 100%;
+      height: 100%;
+      left: 50%;
+      top: 50%;
+      background-color: rgba(255, 255, 255, 0.3);
+      z-index: 0;
+      border-radius: 5px;
+    }
+    .item-hidden {
+      z-index: 1;
+      display: inline-block;
+      transform: translateY(50px);
+    }
+  }
+}
+
+.price {
+  display: block;
+  position: absolute;
+  top: 215px;
+  font-size: 45px;
+  font-weight: 700;
+  color: #fff;
+  &-weight {
+    font-size: 30px;
+  }
+  ~ p {
+    text-align: center;
+    color: #fff;
+    text-decoration: underline;
+    margin-top: 10px;
+    line-height: 22px;
+  }
+}
+
+.item-hidden {
+  position: absolute;
+  left: 49px;
+  top: 200px;
+  z-index: -2;
+  display: none;
 }
 
 //ABOUT

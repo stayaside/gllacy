@@ -10,9 +10,9 @@
 </head>
 
 <body>
-	<input type="radio" name="bg" class="radio radio-1" checked>
-	<input type="radio" name="bg" class="radio radio-2">
-	<input type="radio" name="bg" class="radio radio-3">
+		<input type="radio" name="bg" id="slide-1" class="radio radio-1" checked>
+		<input type="radio" name="bg" id="slide-2" class="radio radio-2">
+		<input type="radio" name="bg" id="slide-3" class="radio radio-3">
 	<div class="bg">
 		<div class="container">
 			<header class="main-header">
@@ -106,15 +106,19 @@
 		<main>
 			<div class="container">
 				<div class="slider">
-					<div class="slide-text">
-						<h2>Крем-брюле и пломбир с малиновым джемом</h2>
-						<a href="#" class="btn">Давайте оба!</a>
+					<div class="slider-inner">
+						<div class="slider-slides">
+							<h2>Пломбир с помадкой и клубничный щербет</h2>
+							<h2>Шоколадный пломбир и лимонный сорбет</h2>	
+							<h2>Крем-брюле и пломбир с малиновым джемом</h2>			
+						</div>
 					</div>
+					<a href="#" class="btn">Давайте оба!</a>
 					<div class="slider-control">
-						<label for="bg"></label>
-						<label for="bg"></label>
-						<label for="bg"></label>
-					</div>
+							<label for="slide-1"></label>
+							<label for="slide-2"></label>
+							<label for="slide-3"></label>
+						</div>
 				</div>
 				<section class="present">
 					<div class="free free-left">
@@ -129,29 +133,33 @@
 					</div>
 				</section>
 				<section class="hits">
-					<div class="item item1">
+					<div class="item">
 						<img src="img/hit.png" width="61" height="61" alt="Хит!">
 						<img src="img/ice-1.png" alt="С апельсинкой" width="267" height="267">
-						<span class="price">310 &#x20bd;/кг</span>
-						<a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+						<span class="price">310₽<span class="price-weight">/кг</span></span>
+						<p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+						<a href="#" class="btn item-hidden">Быстрый просмотр</a>
 					</div>
-					<div class="item item2">
+					<div class="item">
 						<img src="img/hit.png" width="61" height="61" alt="Хит!">
-						<img src="img/ice-2.png" alt="С кофием" width="267" height="267">
-						<span class="price">380 &#x20bd;/кг</span>
-						<a href="#">Сливочно-кофейное с кусочками шоколада</a>
+						<img src="img/ice-2.png" alt="С кофиём" width="267" height="267">
+						<span class="price">380₽<span class="price-weight">/кг</span></span>
+						<p>Сливочно-кофейное с кусочками шоколада</p>
+						<a href="#" class="btn item-hidden">Быстрый просмотр</a>
 					</div>
-					<div class="item item3">
+					<div class="item">
 						<img src="img/hit.png" width="61" height="61" alt="Хит!">
 						<img src="img/ice-3.png" alt="С клубничкой" width="267" height="267">
-						<span class="price">355 &#x20bd;/кг</span>
-						<a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+						<span class="price">355₽<span class="price-weight">/кг</span></span>
+						<p>Сливочно-клубничное с присыпкой из белого шоколада</p>
+						<a href="#" class="btn item-hidden">Быстрый просмотр</a>
 					</div>
-					<div class="item item4">
+					<div class="item">
 						<img src="img/hit.png" width="61" height="61" alt="Хит!">
 						<img src="img/ice-4.png" alt="С карамелькой" width="267" height="267">
-						<span class="price">415 &#x20bd;/кг</span>
-						<a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+						<span class="price">415₽<span class="price-weight">/кг</span></span>
+						<p>Сливочное крем-брюле с карамельной подливкой</p>
+						<a href="#" class="btn item-hidden">Быстрый просмотр</a>
 					</div>
 				</section>
 				<section class="about">
