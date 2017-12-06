@@ -119,12 +119,16 @@ input:focus {
   margin-right: 8px;
   padding: 8px;
 }
+.main-menu > li a {
+  text-decoration: none;
+  border-bottom: 1px solid #c4d0c9;
+}
 .main-menu > li:hover {
   background-color: #fff;
 }
 .main-menu > li:hover a {
   color: #000000;
-  text-decoration: none;
+  border-bottom: none;
   -webkit-transition: .5s all;
   -o-transition: .5s all;
   transition: .5s all;

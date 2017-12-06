@@ -93,25 +93,29 @@ input {
   padding: 0;
   margin: 0;
   &>li {
-    border-radius: 20px;
-    cursor: pointer;
-    display: inline-block;
-    margin-bottom: 10px;
-    margin-right: 8px;
-    padding: 8px;
-    &:hover {
-      background-color: #fff;
+      border-radius: 20px;
+      cursor: pointer;
+      display: inline-block;
+      margin-bottom: 10px;
+      margin-right: 8px;
+      padding: 8px;
       a {
-        color: #000000;
-        text-decoration: none;
-        transition: .5s all;
+          text-decoration: none;
+          border-bottom: 1px solid #c4d0c9;
       }
-    }
-    &:first-child:hover .sub-menu {
-      opacity: 1;
-      transition: .5s opacity;
-      z-index: 2;
-    }
+      &:hover {
+          background-color: #fff;
+          a {
+              color: #000000;
+              border-bottom: none;
+              transition: .5s all;
+          }
+      }
+      &:first-child:hover .sub-menu {
+          opacity: 1;
+          transition: .5s opacity;
+          z-index: 2;
+      }
   }
 }
 
