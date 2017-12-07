@@ -22,7 +22,7 @@
 					<nav class="menu">
 						<ul class="main-menu">
 							<li class="list-menu active">
-								<a href="#" >Каталог</a>
+								<a href="#">Каталог</a>
 								<ul class="sub-menu">
 									<li>
 										<a href="#"></a>Новинки</li>
@@ -62,7 +62,7 @@
 						</div>
 					</div>
 					<div class="cart">
-						<a href="#" class="cart-button">Пусто</a>
+						<a href="#" class="cart-button">2 товара</a>
 						<div class="cart-popup">
 							<table>
 								<tr>
@@ -119,48 +119,65 @@
 			</ul>
 		</div>
 		<h1>Сливочное мороженое</h1>
-		<div class="sort-form">
-			<form action="#" name="sort-form">
-				<fieldset class="sorting">
-					<legend>Сортировка</legend>
+		<form action="#" name="sort-form" class="sort-form">
+			<fieldset class="sorting">
+				<legend>Сортировка:</legend>
+				<div class="sorting-field">
 					<select name="sort[]">
 						<option value="popular" selected>по популярности</option>
 						<option value="price">По цене</option>
 					</select>
-				</fieldset>
-				<fieldset>
-					<legend>Цена:</legend>
-					<input type="text" id="amount-start">
-					<input type="text" id="amount-end">
-					<div id="slider-range"></div>
-				</fieldset>
-				<fieldset>
-					<legend>Жирность:</legend>
-					<label>
-						<input type="radio" name="fat" value="0"> 0%</label>
-					<label>
-						<input type="radio" name="fat" value="<10" checked> до 10%</label>
-					<label>
-						<input type="radio" name="fat" value="<30"> до 30%</label>
-					<label>
-						<input type="radio" name="fat" value=">30"> выше 30%</label>
-				</fieldset>
-				<fieldset>
-					<legend>Наполнители:</legend>
-					<label>
-						<input type="checkbox" name="chocolate" checked> шоколадные</label>
-					<label>
-						<input type="checkbox" name="sugar" checked> сахарные присыпки</label>
-					<label>
-						<input type="checkbox" name="fruits"> фрукты</label>
-					<label>
-						<input type="checkbox" name="syrup"> сиропы</label>
-					<label>
-						<input type="checkbox" name="jem"> джемы</label>
-				</fieldset>
-				<input type="button" value="Применить">
-			</form>
-		</div>
+				</div>
+			</fieldset>
+			<fieldset class="sorting-price">
+				<legend>Цена: 100 руб. – 500 руб.</legend>
+				<div class="slider-range">
+					<div class="slider-line">
+						<div class="slider-line__middle"></div>
+						<div class="slider-line__circle slider-line__circle-min"></div>
+						<div class="slider-line__circle slider-line__circle-max"></div>
+					</div>
+				</div>
+			</fieldset>
+			<fieldset class="sorting-fat">
+				<legend>Жирность:</legend>
+				<div class="sorting-fat__field">
+					<input type="radio" name="fat" value="0" id="radio-1">
+					<input type="radio" name="fat" value="<10" id="radio-2" checked>
+					<input type="radio" name="fat" value="<30" id="radio-3">
+					<input type="radio" name="fat" value=">30" id="radio-4">
+					<label for="radio-1">
+						<span class="label-circle"></span>0%</label>
+					<label for="radio-2">
+						<span class="label-circle"></span>до 10%</label>
+					<label for="radio-3">
+						<span class="label-circle"></span>до 30%</label>
+					<label for="radio-4">
+						<span class="label-circle"></span>выше 30%</label>
+				</div>
+			</fieldset>
+			<fieldset class="sorting-fill">
+				<legend>Наполнители:</legend>
+				<div class="sorting-fill__field">
+					<input type="checkbox" name="chocolate" id="check-1" checked>
+					<input type="checkbox" name="sugar" id="check-2" checked>
+					<input type="checkbox" name="fruits" id="check-3">
+					<input type="checkbox" name="syrup" id="check-4">
+					<input type="checkbox" name="jem" id="check-5">
+					<label for="check-1">
+						<span class="label-circle"></span>шоколадные</label>
+					<label for="check-2">
+						<span class="label-circle"></span>сахарные присыпки</label>
+					<label for="check-3">
+						<span class="label-circle"></span>фрукты</label>
+					<label for="check-4">
+						<span class="label-circle"></span>сиропы</label>
+					<label for="check-5">
+						<span class="label-circle"></span>джемы</label>
+				</div>
+			</fieldset>
+			<input type="button" value="Применить">
+		</form>
 		<section class="products">
 			<div class="page page-1">
 				<div class="row">
@@ -244,24 +261,24 @@
 			</div>
 		</section>
 		<div class="paginator">
-				<ul>
-					<li>
-						<a href="#">1</a>
-					</li>
-					<li>
-						<a href="#">2</a>
-					</li>
-					<li>
-						<a href="#">3</a>
-					</li>
-					<li>
-						<a href="#">4</a>
-					</li>
-					<li>
-						<a href="#">5</a>
-					</li>
-				</ul>
-			</div>
+			<ul>
+				<li>
+					<a href="#">1</a>
+				</li>
+				<li>
+					<a href="#">2</a>
+				</li>
+				<li>
+					<a href="#">3</a>
+				</li>
+				<li>
+					<a href="#">4</a>
+				</li>
+				<li>
+					<a href="#">5</a>
+				</li>
+			</ul>
+		</div>
 	</main>
 	<div class="container">
 		<footer class="main-footer">
