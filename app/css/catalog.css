@@ -148,6 +148,12 @@ input:focus {
 .main-menu .active a {
   border-bottom: none;
 }
+.main-menu .active:active {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5) inset;
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5) inset;
+  color: #000;
+}
 .sub-menu {
   background-color: #fff;
   -webkit-border-radius: 5px;
@@ -215,7 +221,7 @@ input:focus {
   opacity: 0;
   padding: 15px;
   position: absolute;
-  top: 35px;
+  top: 37px;
   -webkit-transition: .5s all;
   -o-transition: .5s all;
   transition: .5s all;
@@ -250,7 +256,7 @@ input:focus {
   padding: 15px;
   position: absolute;
   right: 0px;
-  top: 35px;
+  top: 37px;
   z-index: -1;
 }
 .login-popup input {
@@ -268,6 +274,7 @@ input:focus {
   float: left;
   font-size: 15px;
   height: 35px;
+  line-height: 15px;
   margin-bottom: 0;
   margin-right: 20px;
   width: 35%;
@@ -381,7 +388,7 @@ input:focus {
   padding: 15px;
   position: absolute;
   right: 0;
-  top: 35px;
+  top: 37px;
   width: 510px;
   z-index: -1;
 }
@@ -506,15 +513,26 @@ input:focus {
   padding-right: 18px;
   position: relative;
 }
-.breadcrumps li::after {
-  content: '>>';
+.breadcrumps li::after,
+.breadcrumps li::before {
+  border: solid #fff;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 2px;
+  content: '';
+  height: 0;
+  left: -15px;
   position: absolute;
-  color: #fff;
-  font-size: 12px;
-  top: 2px;
-  left: -18px;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 50%;
 }
-.breadcrumps li:first-of-type::after {
+.breadcrumps li::after {
+  left: -12px;
+}
+.breadcrumps li:first-of-type::after,
+.breadcrumps li:first-of-type::before {
   display: none;
 }
 .breadcrumps li:last-of-type a {
@@ -529,6 +547,7 @@ h1 {
   font-size: 35px;
   line-height: 30px;
   margin-left: 27px;
+  margin-bottom: 10px;
   margin-top: 0;
 }
 .sort-form {
@@ -549,12 +568,11 @@ h1 {
           justify-content: flex-start;
   margin: 0;
   padding: 8px 27px 25px;
-  /*     width: 870px; */
 }
 fieldset {
   border: none;
   padding: 0;
-  margin: 0 15px 12px 0;
+  margin: 0 15px 4px 0;
 }
 legend {
   font-size: 14px;
@@ -577,23 +595,40 @@ legend {
   transition: .5s all;
   width: 100%;
 }
+.sorting-field::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 4px 0 4px;
+  border-color: #fff transparent transparent transparent;
+  top: 45%;
+  right: 5%;
+}
+.sorting-field:hover::after {
+  border-color: #000 transparent transparent transparent;
+}
 select[name="sort[]"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background-color: transparent;
   -webkit-border-radius: 30px;
           border-radius: 30px;
   border: 0;
+  color: inherit;
   cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
   height: 36px;
   margin: 0;
   outline: none;
   padding: 0 25px 0 10px;
-  width: 100%;
-  color: inherit;
   -webkit-transition: .5s all;
   -o-transition: .5s all;
   transition: .5s all;
-  font-size: 16px;
-  font-weight: 700;
+  width: 100%;
 }
 select[name="sort[]"]:hover {
   color: #000;
@@ -770,9 +805,7 @@ select[name="sort[]"]:hover {
 #check-3:checked ~ label[for="check-3"] > span,
 #check-4:checked ~ label[for="check-4"] > span,
 #check-5:checked ~ label[for="check-5"] > span {
-  -webkit-box-shadow: 0 0 0 4px #a9bab0 inset;
-          box-shadow: 0 0 0 4px #a9bab0 inset;
-  background-color: #fff;
+  position: relative;
 }
 #check-1:checked ~ label[for="check-1"] > span:hover,
 #check-2:checked ~ label[for="check-2"] > span:hover,
@@ -781,10 +814,52 @@ select[name="sort[]"]:hover {
 #check-5:checked ~ label[for="check-5"] > span:hover {
   -webkit-box-shadow: 0 0 0 3px #a9bab0 inset;
           box-shadow: 0 0 0 3px #a9bab0 inset;
-  /* background-color: #fff; */
+}
+#check-1:checked ~ label[for="check-1"] > span::before,
+#check-2:checked ~ label[for="check-2"] > span::before,
+#check-3:checked ~ label[for="check-3"] > span::before,
+#check-4:checked ~ label[for="check-4"] > span::before,
+#check-5:checked ~ label[for="check-5"] > span::before {
+  content: '';
+  position: absolute;
+  border: 2px solid #fff;
+  width: 8px;
+  height: 4px;
+  -webkit-transform: translate(-50%, -75%) rotate(-45deg);
+      -ms-transform: translate(-50%, -75%) rotate(-45deg);
+          transform: translate(-50%, -75%) rotate(-45deg);
+  border-top-color: transparent;
+  border-right-color: transparent;
+  top: 50%;
+  left: 50%;
+}
+.sort-form input[type="submit"] {
+  background-color: #a6b7ae;
+  -webkit-border-radius: 30px;
+          border-radius: 30px;
+  -webkit-box-shadow: 0 0 0 2px #fff inset;
+          box-shadow: 0 0 0 2px #fff inset;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  height: 36px;
+  outline: none;
+  width: 144px;
+  margin-top: 34px;
+}
+.sort-form input[type="submit"]:hover {
+  background-color: #ffffff;
+  color: #000;
+}
+.sort-form input[type="submit"]:active {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 2px 2px 0 #000 inset;
+          box-shadow: 0 2px 2px 0 #000 inset;
+  color: #000;
 }
 .page {
-  margin-bottom: 80px;
+  margin-bottom: 65px;
 }
 .row {
   display: -webkit-box;
@@ -795,7 +870,7 @@ select[name="sort[]"]:hover {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0 25px 40px;
+  margin: 0 25px 10px;
 }
 .hits {
   display: -webkit-box;
@@ -818,7 +893,7 @@ select[name="sort[]"]:hover {
   padding: 10px;
   padding-bottom: 0;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 .item:hover {
   margin-bottom: -50px;
@@ -843,7 +918,7 @@ select[name="sort[]"]:hover {
   -webkit-transform: translateY(100px);
       -ms-transform: translateY(100px);
           transform: translateY(100px);
-  z-index: 1;
+  z-index: 2;
 }
 .item:hover .price ~ p {
   text-decoration: none;
@@ -855,6 +930,7 @@ select[name="sort[]"]:hover {
   font-weight: 700;
   position: absolute;
   top: 215px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 .price-weight {
   font-size: 30px;
@@ -865,6 +941,9 @@ select[name="sort[]"]:hover {
   margin-top: 10px;
   text-align: center;
   text-decoration: underline;
+}
+.price__small {
+  font-size: 30px;
 }
 .item-hidden {
   display: none;
@@ -885,10 +964,69 @@ select[name="sort[]"]:hover {
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin-bottom: 35px;
+  margin-bottom: 38px;
+  margin-right: 20px;
+  position: relative;
+}
+.paginator ul {
+  margin: 0;
 }
 .paginator li {
   display: inline-block;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  padding: 3px 8px;
+  text-align: center;
+  cursor: pointer;
+}
+.paginator li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.paginator li:first-of-type:hover,
+.paginator li:last-of-type:hover {
+  background-color: transparent;
+}
+.paginator li.paginator-active:hover {
+  background-color: #fff;
+}
+.paginator a {
+  text-decoration: none;
+}
+.paginator-active {
+  background-color: #fff;
+}
+.paginator-active a {
+  color: #000;
+}
+.paginator-arrow {
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 4px;
+  right: 0;
+  top: 30%;
+}
+.paginator-arrow.arrow-back {
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg);
+  right: 152px;
+}
+.paginator-arrow.arrow-disable {
+  border-color: rgba(255, 255, 255, 0.4);
+  cursor: default;
+}
+.paginator-arrow.arrow-next {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  right: -22px;
+}
+hr {
+  background-color: #cacac7;
+  border: none;
+  height: 1px;
+  width: 95%;
 }
 .main-footer {
   display: -webkit-box;
@@ -899,11 +1037,10 @@ select[name="sort[]"]:hover {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 18px 20px 25px;
+  padding: 10px 20px 25px;
 }
 .footer-social {
   padding-left: 8px;
-  padding-top: 7px;
 }
 .footer-social a {
   background: url('../img/social-sprite.png') -10px 0;
@@ -944,7 +1081,6 @@ select[name="sort[]"]:hover {
   display: flex;
   font-size: 13px;
   margin-left: 25px;
-  padding-top: 18px;
 }
 .footer-documents ul {
   list-style: none;
@@ -961,7 +1097,7 @@ select[name="sort[]"]:hover {
 }
 .footer-documents li {
   margin: 0;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   padding: 0;
 }
 .footer-documents li a {

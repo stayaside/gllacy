@@ -116,6 +116,9 @@ input {
           transition: .5s opacity;
           z-index: 2;
       }
+      &:first-child:active {
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5) inset;
+      }
   }
 }
 
@@ -159,6 +162,7 @@ input {
 }
 
 //SEARCH FIELD
+
 .search {
   background: rgba(255, 255, 255, 0.2) url('../img/menu-sprite.png') no-repeat 30% 99%;
   border-radius: 50%;
@@ -176,7 +180,7 @@ input {
     opacity: 0;
     padding: 15px;
     position: absolute;
-    top: 35px;
+    top: 37px;
     transition: .5s all;
     z-index: -1;
     input {
@@ -198,6 +202,7 @@ input {
 
 //SEARCH FIELD END
 //LOGIN FORM
+
 .login {
   position: relative;
 }
@@ -211,7 +216,7 @@ input {
   padding: 15px;
   position: absolute;
   right: 0px;
-  top: 35px;
+  top: 37px;
   z-index: -1;
   input {
     border-radius: 5px;
@@ -225,6 +230,7 @@ input {
     border: none;
     float: left;
     font-size: 15px;
+    line-height: 15px;
     height: 35px;
     margin-bottom: 0;
     margin-right: 20px;
@@ -327,7 +333,7 @@ input {
   padding: 15px;
   position: absolute;
   right: 0;
-  top: 35px;
+  top: 37px;
   width: 510px;
   z-index: -1;
   table {
@@ -545,9 +551,12 @@ input {
     position: relative;
     width: 560px;
     &-left {
+      background-color: #8e1a2f;
       background-image: url('../img/malina-bg.jpg');
+      margin-right: 25px;
     }
     &-right {
+      background-color: #402619;
       background-image: url('../img/choco-bg.jpg');
     }
     a {
@@ -615,6 +624,7 @@ input {
   font-size: 45px;
   font-weight: 700;
   position: absolute;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   top: 215px;
   &-weight {
     font-size: 30px;
@@ -626,6 +636,9 @@ input {
     text-align: center;
     text-decoration: underline;
   }
+  &__small {
+    font-size: 30px;
+}
 }
 
 .item-hidden {
@@ -739,6 +752,10 @@ input {
     line-height: 22px;
     padding: 25px;
     padding-top: 20px;
+    &-form {
+      display: flex;
+      justify-content: space-between;
+    }
     p {
       margin-bottom: 35px;
     }
@@ -749,7 +766,7 @@ input {
       font-size: 16px;
       line-height: 24px;
       margin-right: 5px;
-      min-width: 368px;
+      width: 100%;
       padding: 9px;
     }
     .btn {
@@ -868,7 +885,7 @@ input {
   }
   li {
     margin: 0;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     padding: 0;
     a {
       transition: .15s all;

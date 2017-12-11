@@ -140,6 +140,10 @@ input:focus {
   transition: .5s opacity;
   z-index: 2;
 }
+.main-menu > li:first-child:active {
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5) inset;
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5) inset;
+}
 .sub-menu {
   background-color: #fff;
   -webkit-border-radius: 5px;
@@ -207,7 +211,7 @@ input:focus {
   opacity: 0;
   padding: 15px;
   position: absolute;
-  top: 35px;
+  top: 37px;
   -webkit-transition: .5s all;
   -o-transition: .5s all;
   transition: .5s all;
@@ -242,7 +246,7 @@ input:focus {
   padding: 15px;
   position: absolute;
   right: 0px;
-  top: 35px;
+  top: 37px;
   z-index: -1;
 }
 .login-popup input {
@@ -259,6 +263,7 @@ input:focus {
   border: none;
   float: left;
   font-size: 15px;
+  line-height: 15px;
   height: 35px;
   margin-bottom: 0;
   margin-right: 20px;
@@ -373,7 +378,7 @@ input:focus {
   padding: 15px;
   position: absolute;
   right: 0;
-  top: 35px;
+  top: 37px;
   width: 510px;
   z-index: -1;
 }
@@ -607,9 +612,12 @@ input:focus {
   width: 560px;
 }
 .present .free-left {
+  background-color: #8e1a2f;
   background-image: url('../img/malina-bg.jpg');
+  margin-right: 25px;
 }
 .present .free-right {
+  background-color: #402619;
   background-image: url('../img/choco-bg.jpg');
 }
 .present .free a {
@@ -682,6 +690,7 @@ input:focus {
   font-size: 45px;
   font-weight: 700;
   position: absolute;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   top: 215px;
 }
 .price-weight {
@@ -693,6 +702,9 @@ input:focus {
   margin-top: 10px;
   text-align: center;
   text-decoration: underline;
+}
+.price__small {
+  font-size: 30px;
 }
 .item-hidden {
   display: none;
@@ -819,6 +831,16 @@ input:focus {
   padding: 25px;
   padding-top: 20px;
 }
+.blog-mail .mail-form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
 .blog-mail .mail p {
   margin-bottom: 35px;
 }
@@ -831,7 +853,7 @@ input:focus {
   font-size: 16px;
   line-height: 24px;
   margin-right: 5px;
-  min-width: 368px;
+  width: 100%;
   padding: 9px;
 }
 .blog-mail .mail .btn {
@@ -960,7 +982,7 @@ input:focus {
 }
 .footer-documents li {
   margin: 0;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   padding: 0;
 }
 .footer-documents li a {
