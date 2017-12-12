@@ -221,8 +221,21 @@ input:focus {
   -webkit-border-radius: 5px;
           border-radius: 5px;
   border: 1px solid #d3d3d2;
+  font-weight: 700;
   padding: 10px 8px;
   width: 100%;
+}
+.search .search-popup input::-webkit-input-placeholder {
+  font-weight: 500;
+}
+.search .search-popup input::-moz-placeholder {
+  font-weight: 500;
+}
+.search .search-popup input:-ms-input-placeholder {
+  font-weight: 500;
+}
+.search .search-popup input::placeholder {
+  font-weight: 500;
 }
 .search:hover {
   background-color: #f8f7f4;
@@ -256,6 +269,19 @@ input:focus {
   margin-bottom: 10px;
   padding: 10px 8px;
   width: 93%;
+  font-weight: 700;
+}
+.login-popup input::-webkit-input-placeholder {
+  font-weight: 500;
+}
+.login-popup input::-moz-placeholder {
+  font-weight: 500;
+}
+.login-popup input:-ms-input-placeholder {
+  font-weight: 500;
+}
+.login-popup input::placeholder {
+  font-weight: 500;
 }
 .login-popup .btn {
   -webkit-border-radius: 40px;
