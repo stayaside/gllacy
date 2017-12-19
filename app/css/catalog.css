@@ -120,6 +120,7 @@ input:focus {
   margin-bottom: 10px;
   margin-right: 4px;
   padding: 8px 10px;
+  /* position: relative; */
 }
 .main-menu > li a {
   text-decoration: none;
@@ -142,13 +143,20 @@ input:focus {
   transition: .5s opacity;
   z-index: 2;
 }
-.main-menu .active {
+.main-menu > li::after {
+  content: '';
+  position: absolute;
+  height: 10px;
+  left: 0;
+  right: 0;
+}
+.active {
   background-color: #d07058;
 }
-.main-menu .active a {
+.active a {
   border-bottom: none;
 }
-.main-menu .active:active {
+.active:active {
   background-color: #ffffff;
   -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5) inset;
           box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5) inset;
@@ -168,12 +176,12 @@ input:focus {
   opacity: 0;
   padding: 0;
   position: absolute;
-  top: 50px;
+  top: 51px;
   z-index: -1;
 }
 .sub-menu li {
-  padding: 10px 20px;
   cursor: pointer;
+  padding: 10px 20px;
   -webkit-transition: 0.5s background-color;
   -o-transition: 0.5s background-color;
   transition: 0.5s background-color;

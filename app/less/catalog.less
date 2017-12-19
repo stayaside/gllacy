@@ -98,6 +98,7 @@ input {
         margin-bottom: 10px;
         margin-right: 4px;
         padding: 8px 10px;
+        /* position: relative; */
         a {
             text-decoration: none;
             border-bottom: 1px solid #c4d0c9;
@@ -115,17 +116,26 @@ input {
             transition: .5s opacity;
             z-index: 2;
         }
+        &::after {
+            content: '';
+            position: absolute;
+            height: 10px;
+            left: 0;
+            right: 0;
+        }
     }
-    .active {
-        background-color: #d07058;
-        a {
-            border-bottom: none;
-        }
-        &:active {
-            background-color: #ffffff;
-            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5) inset;
-            color: #000;
-        }
+
+}
+
+.active {
+    background-color: #d07058;
+    a {
+        border-bottom: none;
+    }
+    &:active {
+        background-color: #ffffff;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5) inset;
+        color: #000;
     }
 }
 
@@ -141,11 +151,11 @@ input {
     opacity: 0;
     padding: 0;
     position: absolute;
-    top: 50px;
+    top: 51px;
     z-index: -1;
     li {
-        padding: 10px 20px;
         cursor: pointer;
+        padding: 10px 20px;
         transition: .5s background-color;
         &:first-child {
             font-weight: 700;

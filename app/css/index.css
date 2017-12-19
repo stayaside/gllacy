@@ -266,10 +266,10 @@ input:focus {
   -webkit-border-radius: 5px;
           border-radius: 5px;
   border: 1px solid #d3d3d2;
+  font-weight: 700;
   margin-bottom: 10px;
   padding: 10px 8px;
   width: 93%;
-  font-weight: 700;
 }
 .login-popup input::-webkit-input-placeholder {
   font-weight: 500;
@@ -686,10 +686,10 @@ input:focus {
   margin-bottom: -50px;
 }
 .item:hover::after {
-  content: '';
   background-color: rgba(255, 255, 255, 0.3);
   -webkit-border-radius: 5px;
           border-radius: 5px;
+  content: '';
   height: 100%;
   left: 50%;
   position: absolute;
@@ -743,10 +743,7 @@ input:focus {
   z-index: -2;
 }
 .about {
-  background-color: #eae0c5;
-  background-image: url('../img/waffle-bg.jpg');
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
+  background: #eae0c5 url('../img/waffle-bg.jpg') no-repeat 50% 50%;
   -webkit-border-radius: 15px;
           border-radius: 15px;
   margin: 0 25px 40px;
@@ -846,10 +843,7 @@ input:focus {
   color: #ec593c;
 }
 .blog-mail .mail {
-  background-color: #f7f6f3;
-  background-image: url('../img/mail-bg.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
+  background: #f7f6f3 url('../img/mail-bg.jpg') no-repeat center;
   -webkit-background-size: 100% 100%;
           background-size: 100% 100%;
   color: #353535;
@@ -879,8 +873,8 @@ input:focus {
   font-size: 16px;
   line-height: 24px;
   margin-right: 5px;
-  width: 100%;
   padding: 9px;
+  width: 100%;
 }
 .blog-mail .mail .btn {
   font-size: 17px;
@@ -889,10 +883,7 @@ input:focus {
   padding: 10px 20px;
 }
 .map {
-  background-color: #fff;
-  background-image: url('../img/map.jpg');
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
+  background: #fff url('../img/map.jpg') no-repeat 50% 50%;
   -webkit-background-size: 100% 100%;
           background-size: 100% 100%;
   min-height: 430px;
