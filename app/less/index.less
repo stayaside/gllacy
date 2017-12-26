@@ -75,19 +75,28 @@ a {
         transition: .5s all;
       }
     }
-    &:first-child:hover .sub-menu {
-      opacity: 1;
-      z-index: 2;
-      transition: .5s opacity;
-    }
   }
+}
+
+.list-menu::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 12px;
+}
+
+.list-menu:hover .sub-menu {
+  opacity: 1;
+  z-index: 2;
+  transition: .5s opacity;
 }
 
 .sub-menu {
   opacity: 0;
   position: absolute;
   left: 20px;
-  top: 50px;
+  top: 52px;
   z-index: -1;
   background-color: #fff;
   list-style: none;
