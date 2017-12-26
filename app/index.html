@@ -10,9 +10,9 @@
 </head>
 
 <body>
-	<input type="radio" name="bg" class="radio radio-1" checked>
-	<input type="radio" name="bg" class="radio radio-2">
-	<input type="radio" name="bg" class="radio radio-3">
+	<input type="radio" name="bg" id="slide-1" class="radio radio-1" checked>
+	<input type="radio" name="bg" id="slide-2" class="radio radio-2">
+	<input type="radio" name="bg" id="slide-3" class="radio radio-3">
 	<div class="bg">
 		<div class="container">
 			<header class="main-header">
@@ -45,15 +45,59 @@
 									<a href="#">О Компании</a>
 								</li>
 							</ul>
-
 						</nav>
 					</div>
 					<div class="user-block">
 						<div class="search">
-							<input type="search">
+							<div class="search-popup">
+								<input type="search" placeholder="Что ищем?" name="search">
+							</div>
 						</div>
-						<a href="#" class="login">Вход</a>
-						<a href="#" class="cart">Пусто</a>
+						<div class="login">
+							<a href="#" class="login-button">Вход</a>
+							<div class="login-popup">
+								<input type="email" name="email" id="mail" placeholder="Электронная почта">
+								<input type="password" name="pass" id="password" placeholder="Пароль">
+								<input type="submit" value="Войти" class="btn">
+								<a href="#">Забыли пароль?</a>
+								<a href="#">Новая регистрация</a>
+							</div>
+						</div>
+						<div class="cart">
+							<a href="#" class="cart-button">Пусто</a>
+							<div class="cart-popup">
+								<table>
+									<tr>
+										<td class="cart-remove"></td>
+										<td>
+											<img src="img/ice-1.png" alt="Ice1" width="33" height="33">
+										</td>
+										<td>Пломбир с апельсиновым джемом</td>
+										<td>1,5 кг</td>
+										<td class="cart-pale">х</td>
+										<td class="cart-pale">200 руб.</td>
+										<td>300 руб.</td>
+									</tr>
+									<tr>
+										<td class="cart-remove"></td>
+										<td>
+											<img src="img/ice-3.png" alt="Ice2" width="33" height="33">
+										</td>
+										<td>Клубничный пломбир с присыпкой из белого шоколада</td>
+										<td>1,5 кг</td>
+										<td class="cart-pale">х</td>
+										<td class="cart-pale">300 руб.</td>
+										<td>450 руб.</td>
+									</tr>
+								</table>
+								<div class="cart-sum">
+									<span>Итого:</span>
+									<span class="cart-sum_number">750 руб.</span>
+								</div>
+								<input type="submit" value="Оформить заказ" class="btn">
+							</div>
+						</div>
+
 					</div>
 				</div>
 				<div class="info">
@@ -65,14 +109,18 @@
 		<main>
 			<div class="container">
 				<div class="slider">
-					<div class="slide-text">
-						<h2>Крем-брюле и пломбир с малиновым джемом</h2>
-						<a href="#" class="btn slider-btn">Давайте оба!</a>
+					<div class="slider-inner">
+						<div class="slider-slides">
+							<h2>Пломбир с помадкой и клубничный щербет</h2>
+							<h2>Шоколадный пломбир и лимонный сорбет</h2>
+							<h2>Крем-брюле и пломбир с малиновым джемом</h2>
+						</div>
 					</div>
+					<a href="#" class="btn">Давайте оба!</a>
 					<div class="slider-control">
-						<label for="bg"></label>
-						<label for="bg"></label>
-						<label for="bg"></label>
+						<label for="slide-1"></label>
+						<label for="slide-2"></label>
+						<label for="slide-3"></label>
 					</div>
 				</div>
 				<section class="present">
@@ -88,29 +136,41 @@
 					</div>
 				</section>
 				<section class="hits">
-					<div class="item item1">
+					<div class="item">
 						<img src="img/hit.png" width="61" height="61" alt="Хит!">
 						<img src="img/ice-1.png" alt="С апельсинкой" width="267" height="267">
-						<span class="price">310 &#x20bd;/кг</span>
-						<a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+						<div class="price">
+								<span>310&#x20bd;</span><span class="price__small">/кг</span>
+							</div>
+						<p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+						<a href="#" class="btn item-hidden">Быстрый просмотр</a>
 					</div>
-					<div class="item item2">
+					<div class="item">
 						<img src="img/hit.png" width="61" height="61" alt="Хит!">
-						<img src="img/ice-2.png" alt="С кофием" width="267" height="267">
-						<span class="price">380 &#x20bd;/кг</span>
-						<a href="#">Сливочно-кофейное с кусочками шоколада</a>
+						<img src="img/ice-2.png" alt="С кофиём" width="267" height="267">
+						<div class="price">
+								<span>380&#x20bd;</span><span class="price__small">/кг</span>
+							</div>
+						<p>Сливочно-кофейное с кусочками шоколада</p>
+						<a href="#" class="btn item-hidden">Быстрый просмотр</a>
 					</div>
-					<div class="item item3">
+					<div class="item">
 						<img src="img/hit.png" width="61" height="61" alt="Хит!">
 						<img src="img/ice-3.png" alt="С клубничкой" width="267" height="267">
-						<span class="price">355 &#x20bd;/кг</span>
-						<a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+						<div class="price">
+								<span>355&#x20bd;</span><span class="price__small">/кг</span>
+							</div>
+						<p>Сливочно-клубничное с присыпкой из белого шоколада</p>
+						<a href="#" class="btn item-hidden">Быстрый просмотр</a>
 					</div>
-					<div class="item item4">
+					<div class="item">
 						<img src="img/hit.png" width="61" height="61" alt="Хит!">
 						<img src="img/ice-4.png" alt="С карамелькой" width="267" height="267">
-						<span class="price">415 &#x20bd;/кг</span>
-						<a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+						<div class="price">
+								<span>415&#x20bd;</span><span class="price__small">/кг</span>
+							</div>
+						<p>Сливочное крем-брюле с карамельной подливкой</p>
+						<a href="#" class="btn item-hidden">Быстрый просмотр</a>
 					</div>
 				</section>
 				<section class="about">
@@ -136,7 +196,8 @@
 				<section class="blog-mail">
 					<div class="col blog">
 						<h3>Новое в нашем блоге</h3>
-						<a href="#">10 способов сервировки фруктовых щербетов к столу</a>
+						<a href="#">10 способов сервировки фруктовых щербетов
+							<br> к столу</a>
 					</div>
 					<div class="col mail">
 						<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не
@@ -148,14 +209,14 @@
 					</div>
 				</section>
 				<section class="map">
-					<img src="img/pin.svg" alt="Наш офис" width="82" height="142">
+					<img src="img/pin.png" alt="Наш офис" width="218" height="142">
 					<div class="address">
-						<p>Адрес главного офиса
-							<br> и офлайн магазина:</p>
+						<p>Адрес главного офиса и
+							<br> офлайн магазина:</p>
 						<span>ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
 						<p>Для заказов по телефону:</p>
 						<span>8 812 450-25-25</span>
-						<p>(с 10 до 20 ежедневно</p>
+						<p>(с 10 до 20 ежедневно)</p>
 						<a href="#" class="btn">Форма обратной связи</a>
 					</div>
 				</section>
@@ -165,31 +226,27 @@
 			<footer class="main-footer">
 				<section class="footer-social">
 					<a href="#" class="social-btn social-btn-tw">Twitter</a>
-					<a href="#" class="social-btn social-btn-inst">Инстаграм</a>
-					<a href="#" class="social-btn social-btn-fb">Фейсбук</a>
-					<a href="#" class="social-btn social-btn-vk">Вконтакте</a>
+					<a href="#" class="social-btn social-btn-inst">Instagram</a>
+					<a href="#" class="social-btn social-btn-fb">Facebook</a>
+					<a href="#" class="social-btn social-btn-vk">VK</a>
 				</section>
 				<section class="footer-documents">
-					<table>
-						<tbody>
-							<tr>
-								<td>
-									<a href="#">Для поставщиков</a>
-								</td>
-								<td>
-									<a href="#">Наши документы</a>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="#">О производствe</a>
-								</td>
-								<td>
-									<a href="#">Экологические стандарты</a>
-								</td>
-							</tr>
-						</tbody>
-					</table>
+					<ul>
+						<li>
+							<a href="#">Для поставщиков</a>
+						</li>
+						<li>
+							<a href="#">О производствe</a>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<a href="#">Наши документы</a>
+						</li>
+						<li>
+							<a href="#">Экологические стандарты</a>
+						</li>
+					</ul>
 				</section>
 				<section class="footer-copyright">
 					<div class="academy-logo">
