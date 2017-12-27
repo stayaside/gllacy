@@ -806,16 +806,11 @@ select[name="sort[]"] {
 .row {
     display: flex;
     justify-content: space-between;
+    justify-content: flex-start;
     margin: 0 25px 10px;
 }
 
-.hits {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 17px 20px;
-}
-
-.item {
+.hits__item {
     border-radius: 5px;
     box-sizing: border-box;
     cursor: pointer;
@@ -823,63 +818,65 @@ select[name="sort[]"] {
     padding: 10px;
     padding-bottom: 0;
     position: relative;
-    z-index: 2;
+    z-index: 1;
+    transition: all .3s ease-out;
     &:hover {
-        margin-bottom: -50px;
-        &::after {
-            content: '';
-            background-color: rgba(255, 255, 255, 0.3);
-            border-radius: 5px;
-            height: 100%;
-            left: 50%;
-            position: absolute;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            width: 100%;
-            z-index: -1;
-        }
-        .item-hidden {
-            display: inline-block;
-            transform: translateY(100px);
-            z-index: 2;
-        }
-        .price~p {
-            text-decoration: none;
-        }
+      margin-bottom: -50px;
+      &::after {
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 5px;
+        content: '';
+        height: 100%;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        z-index: -1;
+      }
+      .hits__item-hidden {
+        display: inline-block;
+        transform: translateY(100px);
+        z-index: 1;
+      }
+      h3 {
+        text-decoration: none;
+      }
     }
-}
-
-.price {
+    h3 {
+      color: #fff;
+      line-height: 22px;
+      margin-top: 10px;
+      text-align: center;
+      text-decoration: underline;
+      font-size: 16px;
+    }
+  }
+  
+  .hits__item-price {
     color: #fff;
     display: block;
     font-size: 45px;
     font-weight: 700;
     position: absolute;
-    top: 215px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    top: 215px;
     &-weight {
-        font-size: 30px;
-    }
-    ~p {
-        color: #fff;
-        line-height: 22px;
-        margin-top: 10px;
-        text-align: center;
-        text-decoration: underline;
+      font-size: 30px;
     }
     &__small {
-        font-size: 30px;
-    }
-}
-
-.item-hidden {
+      font-size: 30px;
+  }
+  }
+  
+  .hits__item-hidden {
+    bottom: 120px;
     display: none;
     left: 49px;
     position: absolute;
-    top: 250px;
     transition: 1s all;
     z-index: -2;
-} 
+  }
 
 // PAGINATOR
 
