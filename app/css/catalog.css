@@ -782,6 +782,9 @@ select[name="sort[]"]:hover {
 .sorting-fat__field span:hover {
   border: 2px solid #f5f5f2;
 }
+.sorting-fat__field span.disabled {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
 #radio-1:checked ~ label[for="radio-1"] > span,
 #radio-2:checked ~ label[for="radio-2"] > span,
 #radio-3:checked ~ label[for="radio-3"] > span,
@@ -931,18 +934,20 @@ select[name="sort[]"]:hover {
   padding: 10px;
   padding-bottom: 0;
   position: relative;
-  z-index: 1;
   -webkit-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 .hits__item:hover {
   margin-bottom: -50px;
+  z-index: 1;
 }
 .hits__item:hover::after {
   background-color: rgba(255, 255, 255, 0.3);
   -webkit-border-radius: 5px;
           border-radius: 5px;
+  -webkit-box-shadow: 0px 15px 20px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 15px 20px 3px rgba(0, 0, 0, 0.1);
   content: '';
   height: 100%;
   left: 50%;
@@ -1020,6 +1025,9 @@ select[name="sort[]"]:hover {
   padding: 3px 8px;
   text-align: center;
   cursor: pointer;
+  -webkit-transition: .25s all;
+  -o-transition: .25s all;
+  transition: .25s all;
 }
 .paginator li:hover {
   background-color: rgba(255, 255, 255, 0.2);

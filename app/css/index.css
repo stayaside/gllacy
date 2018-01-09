@@ -11,9 +11,6 @@ body {
 .bg {
   background-position: 50% 0;
   background-repeat: no-repeat;
-  -webkit-transition: 1s all;
-  -o-transition: 1s all;
-  transition: 1s all;
 }
 .container {
   margin: 0 auto;
@@ -747,8 +744,12 @@ input:focus {
   text-decoration: underline;
   font-size: 16px;
 }
-.hits__item-pics img:first-child {
+.hits__item-pics img:first-of-type {
   position: absolute;
+}
+.hits__item-pics img:last-of-type {
+  width: 100%;
+  height: auto;
 }
 .hits__item-price {
   color: #fff;

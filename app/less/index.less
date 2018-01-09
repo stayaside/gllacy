@@ -13,7 +13,6 @@ body {
 .bg {
   background-position: 50% 0;
   background-repeat: no-repeat;
-  transition: 1s all;
 }
 
 .container {
@@ -660,9 +659,16 @@ input {
   }
 }
 
-.hits__item-pics img:first-child {
+.hits__item-pics img:first-of-type {
     position: absolute;
-  }
+}
+
+.hits__item-pics img:last-of-type {
+    width: 100%;
+    height: auto;
+}
+
+
 
 .hits__item-price {
   color: #fff;
