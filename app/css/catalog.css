@@ -764,6 +764,13 @@ select[name="sort[]"]:hover {
   position: absolute;
   right: 18px;
 }
+.sorting-fat__field label.disabled {
+  color: rgba(255, 255, 255, 0.4);
+  cursor: default;
+}
+.sorting-fat__field label.disabled > span {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
 .sorting-fat__field span {
   -webkit-border-radius: 50%;
           border-radius: 50%;
@@ -781,9 +788,6 @@ select[name="sort[]"]:hover {
 }
 .sorting-fat__field span:hover {
   border: 2px solid #f5f5f2;
-}
-.sorting-fat__field span.disabled {
-  border: 1px solid rgba(255, 255, 255, 0.4);
 }
 #radio-1:checked ~ label[for="radio-1"] > span,
 #radio-2:checked ~ label[for="radio-2"] > span,
@@ -829,6 +833,13 @@ select[name="sort[]"]:hover {
   margin-right: 0;
   position: absolute;
   right: 18px;
+}
+.sorting-fill__field label.disabled {
+  color: rgba(255, 255, 255, 0.4);
+  cursor: default;
+}
+.sorting-fill__field label.disabled > span {
+  border: 1px solid rgba(255, 255, 255, 0.4);
 }
 .sorting-fill__field span {
   -webkit-border-radius: 5px;
@@ -1089,13 +1100,22 @@ hr {
           justify-content: space-between;
   padding: 10px 20px 25px;
 }
+.cls-1 {
+  fill: #fff;
+  fill-rule: evenodd;
+  opacity: .8;
+}
+.cls-1:hover {
+  opacity: 1;
+}
 .footer-social {
   padding-left: 8px;
 }
 .footer-social a {
-  background: url('../img/social-sprite.png') -10px 0;
   -webkit-border-radius: 50%;
           border-radius: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
           box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
   display: inline-block;
@@ -1107,18 +1127,9 @@ hr {
   transition: .5s all;
   width: 32px;
 }
-.footer-social a + .social-btn-inst {
-  background-position: -10px -84px;
-}
-.footer-social a + .social-btn-fb {
-  background-position: -10px -126px;
-}
-.footer-social a + .social-btn-vk {
-  background-position: -10px -42px;
-}
 .footer-social a:hover {
-  -webkit-box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.7);
-          box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.7);
+  -webkit-box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.8);
+          box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.8);
 }
 .footer-social a:active {
   -webkit-box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.7), inset 0px 1px 1px rgba(0, 0, 0, 0.5);

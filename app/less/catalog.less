@@ -680,6 +680,13 @@ select[name="sort[]"] {
             position: absolute;
             right: 18px;
         }
+        &.disabled {
+            color: rgba(255, 255, 255, 0.4);
+            cursor: default;
+            > span {
+                border: 1px solid rgba(255, 255, 255, 0.4);
+            }
+        }
     }
     span {
         border-radius: 50%;
@@ -693,9 +700,6 @@ select[name="sort[]"] {
         width: 20px;
         &:hover {
             border: 2px solid #f5f5f2;
-        }
-        &.disabled {
-            border: 1px solid rgba(255, 255, 255, 0.4);
         }
     }
 }
@@ -735,6 +739,13 @@ select[name="sort[]"] {
             margin-right: 0;
             position: absolute;
             right: 18px;
+        }
+        &.disabled {
+            color: rgba(255, 255, 255, 0.4);
+            cursor: default;
+            > span {
+                border: 1px solid rgba(255, 255, 255, 0.4);
+            }
         }
     }
     span {
@@ -957,35 +968,37 @@ hr {
     padding: 10px 20px 25px;
 }
 
+.cls-1 {
+    fill: #fff;
+    fill-rule: evenodd;
+    opacity: .8;
+    &:hover {
+        opacity: 1;
+    }
+}
+
 .footer-social {
     padding-left: 8px;
     a {
-        background: url('../img/social-sprite.png') -10px 0;
         border-radius: 50%;
-        box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+        box-sizing: border-box;
+        box-shadow: 0 0 0 3px rgba(255,255,255,.5);
         display: inline-block;
         font-size: 0;
         height: 32px;
         margin-right: 14px;
         transition: .5s all;
         width: 32px;
-        +.social-btn-inst {
-            background-position: -10px -84px;
-        }
-        +.social-btn-fb {
-            background-position: -10px -126px;
-        }
-        +.social-btn-vk {
-            background-position: -10px -42px;
-        }
         &:hover {
-            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.7);
+            box-shadow: 0 0 0 3px rgba(255,255,255,.8);
         }
         &:active {
             box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.7), inset 0px 1px 1px rgba(0, 0, 0, 0.5);
         }
     }
 }
+
+
 
 .footer-documents {
     display: flex;
