@@ -672,10 +672,6 @@ input {
   }
 }
 
-
-
-
-
 .hits__item-price {
   color: #fff;
   display: block;
@@ -872,33 +868,41 @@ input {
 
 .footer-social {
   padding-left: 8px;
-  padding-top: 7px;
   a {
-    background: url('../img/social-sprite.png') -10px 0;
-    border-radius: 50%;
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
-    display: inline-block;
-    font-size: 0;
-    height: 32px;
-    margin-right: 14px;
-    transition: .5s all;
-    width: 32px;
-    +.social-btn-inst {
-      background-position: -10px -84px;
-    }
-    +.social-btn-fb {
-      background-position: -10px -126px;
-    }
-    +.social-btn-vk {
-      background-position: -10px -42px;
-    }
-    &:hover {
-      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.7);
-    }
-    &:active {
-      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.7), inset 0px 1px 1px rgba(0, 0, 0, 0.5);
-    }
+      background-image: url('../img/social-sprite.png');
+      background-position: 50% 0;
+      border-radius: 50%;
+      box-sizing: border-box;
+      box-shadow: 0 0 0 3px rgba(255,255,255,.5);
+      display: inline-block;
+      font-size: 0;
+      height: 32px;
+      margin-right: 14px;
+      transition: .5s all;
+      width: 32px;
+      &:hover {
+          box-shadow: 0 0 0 4px rgba(255,255,255,.3);
+          filter: brightness(120%);
+      }
+      &:active {
+          box-shadow: 0 0 0 4px rgba(255,255,255,.5),0 2px 1px 0 #888 inset;
+      }
   }
+}
+
+a.social-btn-fsb {
+  background-position-y: 42px;
+  background-position-x: -10px;
+}
+
+a.social-btn-inst {
+  background-position-y: 84px;
+  background-position-x: -10px;
+}
+
+a.social-btn-vk {
+  background-position-y: 126px;
+  background-position-x: -10px;
 }
 
 .footer-documents {

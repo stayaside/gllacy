@@ -829,7 +829,7 @@ select[name="sort[]"] {
     border-radius: 5px;
     box-sizing: border-box;
     cursor: pointer;
-    max-width: 287px;
+    width: 23.91%;
     padding: 10px;
     padding-bottom: 0;
     position: relative;
@@ -968,18 +968,11 @@ hr {
     padding: 10px 20px 25px;
 }
 
-.cls-1 {
-    fill: #fff;
-    fill-rule: evenodd;
-    opacity: .8;
-    &:hover {
-        opacity: 1;
-    }
-}
-
 .footer-social {
     padding-left: 8px;
     a {
+        background-image: url('../img/social-sprite.png');
+        background-position: 50% 0;
         border-radius: 50%;
         box-sizing: border-box;
         box-shadow: 0 0 0 3px rgba(255,255,255,.5);
@@ -990,12 +983,28 @@ hr {
         transition: .5s all;
         width: 32px;
         &:hover {
-            box-shadow: 0 0 0 3px rgba(255,255,255,.8);
+            box-shadow: 0 0 0 4px rgba(255,255,255,.3);
+            filter: brightness(120%);
         }
         &:active {
-            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.7), inset 0px 1px 1px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 0 4px rgba(255,255,255,.5),0 2px 1px 0 #888 inset;
         }
     }
+}
+
+a.social-btn-fsb {
+    background-position-y: 42px;
+    background-position-x: -10px;
+}
+
+a.social-btn-inst {
+    background-position-y: 84px;
+    background-position-x: -10px;
+}
+
+a.social-btn-vk {
+    background-position-y: 126px;
+    background-position-x: -10px;
 }
 
 

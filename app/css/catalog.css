@@ -941,7 +941,7 @@ select[name="sort[]"]:hover {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   cursor: pointer;
-  max-width: 287px;
+  width: 23.91%;
   padding: 10px;
   padding-bottom: 0;
   position: relative;
@@ -1100,18 +1100,12 @@ hr {
           justify-content: space-between;
   padding: 10px 20px 25px;
 }
-.cls-1 {
-  fill: #fff;
-  fill-rule: evenodd;
-  opacity: .8;
-}
-.cls-1:hover {
-  opacity: 1;
-}
 .footer-social {
   padding-left: 8px;
 }
 .footer-social a {
+  background-image: url('../img/social-sprite.png');
+  background-position: 50% 0;
   -webkit-border-radius: 50%;
           border-radius: 50%;
   -webkit-box-sizing: border-box;
@@ -1128,12 +1122,26 @@ hr {
   width: 32px;
 }
 .footer-social a:hover {
-  -webkit-box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.8);
-          box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.3);
+          box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.3);
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
 }
 .footer-social a:active {
-  -webkit-box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.7), inset 0px 1px 1px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.7), inset 0px 1px 1px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5), 0 2px 1px 0 #888 inset;
+          box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5), 0 2px 1px 0 #888 inset;
+}
+a.social-btn-fsb {
+  background-position-y: 42px;
+  background-position-x: -10px;
+}
+a.social-btn-inst {
+  background-position-y: 84px;
+  background-position-x: -10px;
+}
+a.social-btn-vk {
+  background-position-y: 126px;
+  background-position-x: -10px;
 }
 .footer-documents {
   display: -webkit-box;
