@@ -50,14 +50,23 @@
 					<div class="user-block">
 						<div class="search">
 							<div class="search-popup">
-								<input type="search" placeholder="Что ищем?" name="search">
+								<div class="search-container">
+									<input type="search" name="search" class="search-input">
+									<label for="search" class="search-label">Что ищем?</label>
+								</div>
 							</div>
 						</div>
 						<div class="login">
 							<a href="#" class="login-button">Вход</a>
 							<div class="login-popup">
-								<input type="email" name="email" id="mail" placeholder="Электронная почта">
-								<input type="password" name="pass" id="password" placeholder="Пароль">
+								<div class="mail-container">
+									<input type="email" name="email" value="" class="mail-input">
+									<label for="email" class="mail-label">Электронная почта</label>
+								</div>
+								<div class="pass-container">
+									<input type="password" name="pass" id="password">
+									<label for="pass" class="pass-label">Пароль</label>
+								</div>
 								<input type="submit" value="Войти" class="btn">
 								<a href="#">Забыли пароль?</a>
 								<a href="#">Новая регистрация</a>
@@ -139,61 +148,71 @@
 						<a href="#" class="btn">Хочу шоколадки!</a>
 					</div>
 				</section>
-				<section class="hits">
-					<div class="hits__item">
-						<div class="hits__item-pics">
-							<img src="img/hit.png" width="61" height="61" alt="Хит!">
-							<img src="img/ice-1.png" alt="С апельсинкой" width="267" height="267">
-							<div class="hits__item-price">
+				<section class="products">
+					<div class="product">
+						<div class="product__top">
+							<div class="product__top-img">
+								<img src="img/hit.png" width="61" height="61" alt="Хит!">
+								<img src="img/ice-1.png" alt="С апельсинкой" width="267" height="267">
+							</div>
+							<div class="product__price">
 								<span>310&#x20bd;</span>
-								<span class="hits__item-price__small">/кг</span>
+								<span class="product__price-small">/кг</span>
 							</div>
 						</div>
-						<h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
-						<div class="hits__item-hidden">
-							<a href="#" class="btn hits__item-btn">Быстрый просмотр</a>
+						<h3 class="product-text">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+						<div class="product__hidden">
+							<a href="#" class="btn product-btn">Быстрый просмотр</a>
 						</div>
 					</div>
-					<div class="hits__item">
-						<div class="hits__item-pics">
-							<img src="img/hit.png" width="61" height="61" alt="Хит!">
-							<img src="img/ice-2.png" alt="С кофием" width="267" height="267">
-							<div class="hits__item-price">
+					<div class="product">
+						<div class="product__top">
+							<div class="product__top-img">
+								<img src="img/hit.png" width="61" height="61" alt="Хит!">
+								<img src="img/ice-2.png" alt="С кофием" width="267" height="267">
+							</div>
+							<div class="product__price">
 								<span>380&#x20bd;</span>
-								<span class="hits__item-price__small">/кг</span>
+								<span class="product__price-small">/кг</span>
 							</div>
 						</div>
 						<h3>Сливочно-кофейное с кусочками шоколада</h3>
-						<div class="hits__item-hidden">
-							<a href="#" class="btn hits__item-btn">Быстрый просмотр</a>
+						<div class="product__hidden">
+							<a href="#" class="btn product-btn">Быстрый просмотр</a>
 						</div>
 					</div>
-					<div class="hits__item">
-						<div class="hits__item-pics">
-							<img src="img/hit.png" width="61" height="61" alt="Хит!">
-							<img src="img/ice-3.png" alt="С клубничкой" width="267" height="267">
-							<div class="hits__item-price">
-								<span>355&#x20bd;</span>
-								<span class="hits__item-price__small">/кг</span>
+					<div class="product">
+						<div class="product__top">
+							<div class="product__top-img">
+								<img src="img/hit.png" width="61" height="61" alt="Хит!">
+								<img src="img/ice-3.png" alt="С клубничкой" width="267" height="267">
 							</div>
+							<div class="product__price">
+								<span>355&#x20bd;</span>
+								<span class="product__price-small">/кг</span>
+							</div>
+
 						</div>
 						<h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
-						<div class="hits__item-hidden">
-							<a href="#" class="btn hits__item-btn">Быстрый просмотр</a>
+						<div class="product__hidden">
+							<a href="#" class="btn product-btn">Быстрый просмотр</a>
 						</div>
 					</div>
-					<div class="hits__item">
-						<div class="hits__item-pics">
-							<img src="img/hit.png" width="61" height="61" alt="Хит!">
-							<img src="img/ice-4.png" alt="С карамелькой" width="267" height="267">
-							<div class="hits__item-price">
-								<span>415&#x20bd;</span>
-								<span class="hits__item-price__small">/кг</span>
+					<div class="product">
+						<div class="product__top">
+							<div class="product__top-img">
+								<img src="img/hit.png" width="61" height="61" alt="Хит!">
+								<img src="img/ice-4.png" alt="С карамелькой" width="267" height="267">
 							</div>
+							<div class="product__price">
+								<span>415&#x20bd;</span>
+								<span class="product__price-small">/кг</span>
+							</div>
+
 						</div>
 						<h3>Сливочное крем-брюле с карамельной подливкой</h3>
-						<div class="hits__item-hidden">
-							<a href="#" class="btn hits__item-btn">Быстрый просмотр</a>
+						<div class="product__hidden">
+							<a href="#" class="btn product-btn">Быстрый просмотр</a>
 						</div>
 					</div>
 				</section>
@@ -227,7 +246,10 @@
 						<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не
 							спамить и не слать всякой не нужной ерунды. Честно =)</p>
 						<form action="#" class="mail-form" method="post">
-							<input type="email" name="email" value="" placeholder="Электронная почта">
+							<div class="mail-container">
+								<input type="email" name="email" value="" class="mail-input">
+								<label for="email" class="mail-label">Электронная почта</label>
+							</div>
 							<button class="btn" type="submit">Отправить</button>
 						</form>
 					</div>
@@ -235,7 +257,7 @@
 			</div>
 			<section class="map">
 				<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A97683eb3a34250a339a8521e4a526f2c53fbd6928bc6840392ee35c932b7b5a2&amp;source=constructor"
-					width="100%" height="430" frameborder="0"></iframe>
+				    width="100%" height="430" frameborder="0"></iframe>
 				<div class="container">
 					<div class="address">
 						<p>Адрес главного офиса и
@@ -289,9 +311,15 @@
 		<button class="callback-popup-close" type="button" title="Закрыть">Закрыть</button>
 		<h2 class="callback-popup-title">Мы обязательно вам ответим!</h2>
 		<form action="https://echo.htmlacademy.ru/" method="POST" class="login-form">
-			<div class="callback-popup-raw"><input type="text" name="name" placeholder="Как вас зовут?" class="callback-popup-name"></div>
-			<div class="callback-popup-raw"><input type="email" name="email" placeholder="Ваша почта для ответа" class="callback-popup-email"></div>
-			<div class="callback-popup-raw"><textarea name="textarea" id="text" rows="10" placeholder="Напишите что-нибудь..."></textarea></div>
+			<div class="callback-popup-raw">
+				<input type="text" name="name" placeholder="Как вас зовут?" class="callback-popup-name">
+			</div>
+			<div class="callback-popup-raw">
+				<input type="email" name="email" placeholder="Ваша почта для ответа" class="callback-popup-email">
+			</div>
+			<div class="callback-popup-raw">
+				<textarea name="textarea" id="text" rows="10" placeholder="Напишите что-нибудь..."></textarea>
+			</div>
 			<button type="submit" class="btn">Отправить</button>
 		</form>
 	</div>

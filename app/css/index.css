@@ -235,25 +235,16 @@ input:focus {
   transition: .5s all;
   z-index: -1;
 }
-.search .search-popup input {
+.search .search-container {
+  position: relative;
+}
+.search .search-input {
   -webkit-border-radius: 5px;
           border-radius: 5px;
   border: 1px solid #d3d3d2;
   font-weight: 700;
   padding: 10px 8px;
   width: 100%;
-}
-.search .search-popup input::-webkit-input-placeholder {
-  font-weight: 500;
-}
-.search .search-popup input::-moz-placeholder {
-  font-weight: 500;
-}
-.search .search-popup input:-ms-input-placeholder {
-  font-weight: 500;
-}
-.search .search-popup input::placeholder {
-  font-weight: 500;
 }
 .search:hover {
   background-color: #f8f7f4;
@@ -280,6 +271,9 @@ input:focus {
   top: 37px;
   z-index: -1;
 }
+.login-popup .pass-container {
+  position: relative;
+}
 .login-popup input {
   -webkit-border-radius: 5px;
           border-radius: 5px;
@@ -288,18 +282,6 @@ input:focus {
   margin-bottom: 10px;
   padding: 10px 8px;
   width: 93%;
-}
-.login-popup input::-webkit-input-placeholder {
-  font-weight: 500;
-}
-.login-popup input::-moz-placeholder {
-  font-weight: 500;
-}
-.login-popup input:-ms-input-placeholder {
-  font-weight: 500;
-}
-.login-popup input::placeholder {
-  font-weight: 500;
 }
 .login-popup .btn {
   -webkit-border-radius: 40px;
@@ -684,7 +666,8 @@ input:focus {
   line-height: 35px;
   margin: 0;
 }
-.hits {
+.products {
+  margin-bottom: 65px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -693,93 +676,103 @@ input:focus {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0 17px 20px;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 20px;
 }
-.hits__item {
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  cursor: pointer;
-  width: 23.91%;
-  padding: 10px;
-  padding-bottom: 0;
+.product {
   position: relative;
-  z-index: 1;
+  color: #fff;
+  margin-bottom: 40px;
   -webkit-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 23.25%;
+  cursor: pointer;
 }
-.hits__item:hover {
-  margin-bottom: -50px;
+.product__top {
+  position: relative;
 }
-.hits__item:hover::after {
-  background-color: rgba(255, 255, 255, 0.3);
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
-  content: '';
-  height: 100%;
-  left: 50%;
+.product__top-img {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+  padding-top: 100%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+}
+.product__top-img img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+.product__price {
+  position: absolute;
+  bottom: 0;
+  min-width: 100%;
+  font-size: 45px;
+  font-weight: 700;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  z-index: 2;
+}
+.product__price-small {
+  font-size: 30px;
+  margin-left: -5px;
+}
+.product h3 {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  text-align: center;
+}
+.product__hidden {
+  position: absolute;
+  z-index: 2;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+.product:hover {
+  z-index: 2;
+  margin-bottom: -30px;
+  padding-bottom: 70px;
+  cursor: pointer;
+}
+.product:hover .product__hidden {
+  display: block;
+}
+.product:hover::after {
+  content: "";
   position: absolute;
   top: 50%;
+  left: 50%;
+  display: block;
+  width: 105%;
+  height: 102%;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  background-color: rgba(248, 247, 244, 0.3);
+  -webkit-box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.15);
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 100%;
-  z-index: -1;
-}
-.hits__item:hover .hits__item-hidden {
-  display: inline-block;
-  -webkit-transform: translateY(100px);
-      -ms-transform: translateY(100px);
-          transform: translateY(100px);
-  z-index: 1;
-}
-.hits__item:hover h3 {
-  text-decoration: none;
-}
-.hits__item h3 {
-  color: #fff;
-  line-height: 22px;
-  margin-top: 10px;
-  text-align: center;
-  text-decoration: underline;
-  font-size: 16px;
-}
-.hits__item-pics {
-  position: relative;
-}
-.hits__item-pics img:first-of-type {
-  position: absolute;
-}
-.hits__item-pics img:last-of-type {
-  width: 100%;
-  height: auto;
-}
-.hits__item-price {
-  color: #fff;
-  display: block;
-  font-size: 45px;
-  font-weight: 700;
-  position: absolute;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  bottom: 0;
-}
-.hits__item-price-weight {
-  font-size: 30px;
-}
-.hits__item-price__small {
-  font-size: 30px;
-}
-.hits__item-hidden {
-  bottom: 120px;
-  display: none;
-  left: 49px;
-  position: absolute;
-  -webkit-transition: 1s all;
-  -o-transition: 1s all;
-  transition: 1s all;
-  z-index: -2;
 }
 .about {
   background: #eae0c5 url('../img/waffle-bg.jpg') no-repeat 50% 50%;
@@ -920,6 +913,36 @@ input:focus {
   font-weight: 700;
   line-height: 24px;
   padding: 10px 20px;
+}
+.mail-container {
+  position: relative;
+  width: 100%;
+  margin-right: 20px;
+}
+.mail-label,
+.search-label,
+.pass-label {
+  position: absolute;
+  left: 15px;
+  top: 0;
+  line-height: 40px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  font-size: 14px;
+  color: #bbb;
+}
+.mail-input:focus ~ .mail-label,
+.mail-input:not(:focus):invalid ~ .mail-label,
+.search-input:focus ~ .search-label,
+.search-input:not(:focus):invalid ~ .search-label .pass-input:focus ~ .pass-label,
+.pass-input:not(:focus):invalid ~ .pass-label {
+  top: -28px;
+  font-size: 11px;
+  color: #5b9ddf;
 }
 .map {
   background: #849D8F url('../img/map.jpg') no-repeat 50% 50%;

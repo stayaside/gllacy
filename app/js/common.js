@@ -6,7 +6,6 @@ var form = popup.querySelector("form");
 var mail = popup.querySelector("[name=email]");
 var text = popup.querySelector("[name=textarea]");
 
-
 //LOGIN
 
 link.addEventListener("click", function(event) {
