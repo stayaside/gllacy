@@ -74,20 +74,19 @@ gulp.task('start', ['browser-sync', 'css-libs', 'scripts'], function() {
 });
 
 gulp.task('build', ['clean', 'img', 'less', 'scripts'], function() {
-	var buildCSS = gulp.src([
-		'app/css/main.css',
-		'app/css/libs.min.css',
+	var buildCSS = gulp.src([ // Переносим библиотеки в продакшен
+		'app/css/*',
 		])
-	.pipe(gulp.dest('dist/css'));
+	.pipe(gulp.dest('dist/css'))
 
 	var buildFonts = gulp.src('app/fonts/**/*')
-	.pipe(gulp.dest('dist/fonts'));
+	.pipe(gulp.dest('dist/fonts'))
 
 	var buildFA = gulp.src('app/libs/font-awesome-4.7.0/**/*')
-	.pipe(gulp.dest('dist/fonts'));
+	.pipe(gulp.dest('dist/fonts'))
 
 	var buildJS = gulp.src('app/js/**/*')
-	.pipe(gulp.dest('dist/js'));
+	.pipe(gulp.dest('dist/js'))
 
 	var buildHtml = gulp.src('app/*.html')
 	.pipe(gulp.dest('dist'));
