@@ -278,10 +278,27 @@ input:focus {
   -webkit-border-radius: 5px;
           border-radius: 5px;
   border: 1px solid #d3d3d2;
-  font-weight: 700;
   margin-bottom: 10px;
   padding: 10px 8px;
   width: 93%;
+  font-weight: 700;
+  font-size: 14px;
+}
+.login-popup input::-webkit-input-placeholder {
+  font-weight: 300;
+  color: #bbb;
+}
+.login-popup input::-moz-placeholder {
+  font-weight: 300;
+  color: #bbb;
+}
+.login-popup input:-ms-input-placeholder {
+  font-weight: 300;
+  color: #bbb;
+}
+.login-popup input::placeholder {
+  font-weight: 300;
+  color: #bbb;
 }
 .login-popup .btn {
   -webkit-border-radius: 40px;
@@ -920,8 +937,7 @@ input:focus {
   margin-right: 20px;
 }
 .mail-label,
-.search-label,
-.pass-label {
+.search-label {
   position: absolute;
   left: 15px;
   top: 0;
@@ -934,12 +950,12 @@ input:focus {
   font-weight: 300;
   font-size: 14px;
   color: #bbb;
+  pointer-events: none;
 }
 .mail-input:focus ~ .mail-label,
-.mail-input:not(:focus):invalid ~ .mail-label,
+.mail-input:not(:focus):valid ~ .mail-label,
 .search-input:focus ~ .search-label,
-.search-input:not(:focus):invalid ~ .search-label .pass-input:focus ~ .pass-label,
-.pass-input:not(:focus):invalid ~ .pass-label {
+.search-input:not(:focus):valid ~ .search-label {
   top: -28px;
   font-size: 11px;
   color: #5b9ddf;

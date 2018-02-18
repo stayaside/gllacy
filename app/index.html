@@ -51,7 +51,7 @@
 						<div class="search">
 							<div class="search-popup">
 								<div class="search-container">
-									<input type="search" name="search" class="search-input">
+									<input type="search" name="search" class="search-input" required>
 									<label for="search" class="search-label">Что ищем?</label>
 								</div>
 							</div>
@@ -60,12 +60,12 @@
 							<a href="#" class="login-button">Вход</a>
 							<div class="login-popup">
 								<div class="mail-container">
-									<input type="email" name="email" value="" class="mail-input">
+									<input type="email" name="email" class="mail-input" required>
 									<label for="email" class="mail-label">Электронная почта</label>
 								</div>
 								<div class="pass-container">
-									<input type="password" name="pass" id="password">
-									<label for="pass" class="pass-label">Пароль</label>
+									<input type="password" name="pass" id="password" class="pass-input" placeholder="Пароль">
+									<!-- <label for="pass" class="pass-label">Пароль</label> -->
 								</div>
 								<input type="submit" value="Войти" class="btn">
 								<a href="#">Забыли пароль?</a>
@@ -247,7 +247,7 @@
 							спамить и не слать всякой не нужной ерунды. Честно =)</p>
 						<form action="#" class="mail-form" method="post">
 							<div class="mail-container">
-								<input type="email" name="email" value="" class="mail-input">
+								<input type="email" name="email" value="" class="mail-input" required>
 								<label for="email" class="mail-label">Электронная почта</label>
 							</div>
 							<button class="btn" type="submit">Отправить</button>
